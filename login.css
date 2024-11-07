@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family:'Poppins';
+    src: url(./Poppins/Poppins-Light.ttf) format('woff2');
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background-image: url(./img/login/p2.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.log{
+    box-sizing: border-box;
+    width: 40% ;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    position: relative;
+    text-align: center;
+    border-radius: 100px;
+}
+.log form{
+    display: block;
+    position: relative;
+    justify-content: center;
+}
+.log .mas {
+    position: absolute; 
+    bottom: 10%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    color: red; 
+}
+
+.log h1{
+    color: blue;
+    font-size: 50px;
+    margin-top: 5%;
+    text-align: start;
+}
+.log select{
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    margin-left: 60px;
+    width: 190px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+  outline: none;
+  border-style: none;
+}
+.log select:focus{
+    outline: none;
+    border: none;
+}
+.log .id{
+    box-sizing: border-box;
+    align-items: center;
+    background-color: blue;
+    margin-top: 5%;
+    border-radius: 50px;
+    border: 2px  blue;
+}
+
+.log input{
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    border-radius: 20px;
+    border-style: none;
+    border: 2px solid blue;
+    outline: none;
+    box-sizing: border-box;
+}
+.log input:focus{
+    border: 2px solid blue;
+}
+/*heq shigjetat*/
+input[type="number"] {
+    -moz-appearance: textfield; 
+    -webkit-appearance: none; 
+    appearance: none; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.log svg{
+    width: 50px;
+    height: 20px;
+    color: white;
+    border-radius: 100px;
+}
+.log label{
+    margin-top: 40%;
+    position: relative;
+    top: 2px;
+    background-color: blue;
+    border-radius: 20px;
+}
+.log input:focus{
+    border: 2px solid blue;
+    outline: none;
+    transition: none;
+}
+::placeholder{
+    color: blue;
+    opacity: 1;
+}
+.log button{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    border: 2px solid blue;
+    background: white;
+    border-radius: 20px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+.log button:hover{
+    background-color: blue;
+    color: white;
+}
+/*Responsive type*/
+@media (max-width:600px) {
+    .log{
+        width: 70%;
+        border-radius: 0px;
+    }
+}
+@media ( min-width:800px ) and (max-width:1200px){
+    .log{
+        width: 50%;
+        border-radius: 0px;
+    }
+}
