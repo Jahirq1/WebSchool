@@ -15,6 +15,7 @@ header{
   position: sticky;
   top: 0;
  z-index: 100;
+ overflow: visible;
 }
 
 header nav ul{
@@ -72,57 +73,88 @@ header img{
 
 /*Dizajni i sektionit Hero*/
 
-.hero{
+
+.slider-container {
   width: 100%;
-  height: 700px;
-  background-image: url(../img/ubt-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  display: block;
+  margin: 0 auto;
+  overflow: hidden; 
 }
-.hero h1{
-  width: 420px;
-  position:relative;
- left: 19%;
- top: 32%;
- font-size: 60px;
- color: white;
- opacity: 1;
+.slider-container .teksti{
+  position: absolute;
+  z-index: 2;
+  left: 22%;
+  top: 39%;
 }
+.slider-container .teksti{
+  width: 520px;
+  font-size: 49px;
+  color: white;
+}
+.slider-container .teksti h1{
+  
+    font-size: 3rem;
+    border-right: 3px solid white;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 5s steps(50) 1s forwards, blink 0.75s step-end infinite;
 
-.hero h1 em{
-  font-style: initial;
-  font-size: 65px;
 }
-
-.hero img{
-  width: 550px;
-  height: 400px;
-  position:relative;
-  left: 53%;
-  opacity: 1;
-  border-radius :20px;
-}
-.hero button{
-  width: 190px;
-  height: 60px;
-  font-size: 29px;
-  background-color: #3259dc;
+.slider-container input{
+  width: 780px;
+  height: 50px;
+  border-radius: 20px;
   border-style: none;
-   border-radius: 10px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-align: center;
   color: white;
-  font-style: initial;
-   position: relative;
-   right: 15%;
-   bottom: 10%;
+  font-size: 26px;
+  background: transparent;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
 }
 
-.hero button:hover{
-  background-color: aqua;
-  color: white;
-  cursor: pointer;
+input[type="search"]::-moz-search-cancel-button {
+  display: none;
 }
+
+input[type="search"] {
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+}
+.slider-container input::placeholder{
+  font-size: 26px;
+  color: white;
+  font-style: initial;
+}
+
+.slider-container input:focus{
+  outline: 2px solid white;
+}
+.slider {
+  display: flex;
+  width: 100%;
+  height: 750px; 
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%; 
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: block; 
+}
+
 /*NEN DIZAJN I SEKTIONIT TE DYT HERO*/
 .sub {
   background-color: #3259dc;
@@ -327,6 +359,12 @@ header img{
   width: 250px;
   height: 250px;
 }
+
+
+
+
+
+
 /*Footeriii*/
 footer{
   background-color: #3259dc;
@@ -345,38 +383,15 @@ footer h4{
 
 
 
+
+
+
 /* RESPONSIVE */
 
 @media (max-width:900px) {
+  
   /*Pjesa e HERO*/
-  .hero{
-    top: 40px;
-    width: 100%;
-    height: 500px;
-     background-size: cover;
-  }
-  .hero h1{
-    width: 300px;
-   left: 5%;
-   top: 32%;
-   font-size: 40px;
-  }
-  .hero h1 em{
-    font-size: 45px;
-  }
-  .hero button{
-    width: 130px;
-    height: 60px;
-    font-size: 19px;
-    right: 25%;
-    bottom: 10%;
-  }
-  .hero img{
-    width: 300px;
-    height: 300px;
-    position:relative;
-    left: 50%;
-  }
+
   /*Pjesa e HERO*/
 
   /*Pjesa e sub*/
@@ -518,4 +533,20 @@ footer h4{
 } 
 
 
+}
+
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
 }

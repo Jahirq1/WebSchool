@@ -20,11 +20,25 @@
         <a href="login.html"><button >Log in</button></a>
     </nav>
     </header>
-    <section class="hero">
-        <h1>Studio <em>ne</em><br>kolegjin me te mire!</h1>
-         <img src="../img/ubtpost.jpg" alt="">
-        <button>Lexo meshum</button>
+    <section class="slider-container">
+        <div class="teksti">
+            <h1>MIRE SE VINI NE UBT</h1>
+            <input type="search" id="searchInput" placeholder="search">
+        </div>
+        <div class="slider">
+            <div class="slide">
+                <img src="../img/back/f1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="../img/back/f2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="../img/back/f3.jpg" alt="Image 3">
+            </div>
+        </div>  
     </section>
+   
+   <!--- nen faqja -->
     <section class="sub">
         <div class="su">
         <h1>Pse <em>duhet te</em><br>zgjedhesh UBT ? </h1>
@@ -32,11 +46,17 @@
         <img src="../img/ubtpost1.png" alt=""></div>
         <p>qe nga 2004 UBT lider ne arsim te ulet dhe te lart</p>
     </section>
+    
+    <!--- promotion sektori-->
+
     <section class="promotion">
         <h2 class="h1">American Europian school</h2>
        <img src="../img/ubtpost2.png" alt="">
        <h2 class="h3">Recognized For Excellence 5 Star</h2>
     </section>
+     
+    <!---Sektori historia -->
+
     <section class="historia">
         <h1>Rreth Nesh</h1>
         <p>Shkolla Fillore , e Mesme e Ulet dhe e Mesme e Lart “Kolegji UBT ”
@@ -45,7 +65,10 @@
             <img src="../img/ubtpost4.png" alt="">
         </section>
         <hr>
-    <section class="lajmet">
+
+     <!--- Sektori Lajmet -->
+        
+     <section class="lajmet">
         <a href=""><h1>Lajmet</h1></a>
         <div class="post" >
             <img src="../img/post/post.jpeg" alt="">
@@ -63,9 +86,33 @@
              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam veritatis expedita voluptas vitae fugit, obcaecati, modi officiis corporis ipsam rem, nobis non ad? Nostrum corporis soluta doloribus incidunt quidem sequi.</p>
         </div>
     </section>
-    <footer>
+
+     <!--- footeri-->
+    
+     <footer>
         <hr>
         <h4>copyrights &#169 all rights reserved from UBT</h4>
     </footer>
+
+    <!---- javascript  -->
+    <script >
+
+
+        let currentIndex = 0;  
+const slides = document.querySelectorAll('.slide');  
+console.log('.slide');
+const totalSlides = slides.length;  
+
+function nextSlide() {
+    
+    currentIndex = (currentIndex + 1) % totalSlides;
+    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+
+setInterval(nextSlide, 5000);  
+
+
+</script>
 </body>
 </html>

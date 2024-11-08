@@ -35,3 +35,6 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         message.textContent = 'ID ose fjalëkalimi i gabuar.';
     }
 });
+
+
+
