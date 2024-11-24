@@ -1,110 +1,184 @@
 *{
     margin: 0;
     padding: 0;
+    }
+    header{
+        box-sizing: border-box;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #003366;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header nav ul{
+     list-style: none;
+     color: white;
+     display: inline-flex;
     
-}
-
-
-/*Pjesa e headerit*/
-header {
-    box-sizing: border-box;
-    width: 100%;
-    height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #003366;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-
-
-header nav ul {
-    list-style: none;
-    color: white;
-    display: inline-flex;
-}
-
-nav ul li {  
-    cursor: pointer;
-}
-nav ul li a{
-    color: white;
-   
-    padding: 10px 10px;
-    text-decoration: none;
-}
-.i1{
-    width: 90px;
-    height: 80px;
-    border-radius: 15px;
-    position: absolute;
-    left: 1%;
-}
-
-
-#p6{
-        margin-right:20px ;
+    }nav ul li {  
+        cursor: pointer;
+    }nav ul li a{
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+    }
+    .i2{
+        width: 80px;
+        height: 70px;
+        position: absolute;
+        left: 50px;
+        
+    }
+    #p6{
+            margin-right:20px ;
+            border: none;
+            border-radius: 20px;
+            width: 60px;
+            height: 40px;
+            border-style: none;
+        }
+    
+        /*Pjesa main*/
+        main{
+       
+       
+            background-color: #003366;
+            width: 100%;
+            height: 150vh;
+        }
+       
+    .p-titulli{
+        font-size:2.5em ;
+        color: whitesmoke;
+        font-family:Georgia, serif;
+        font-size: 3.0em;
+        position: relative;
+        left: 10%;
+        top: 10px;
+    }
+    main input{
+        position: relative;
+        left:40%;
         border-radius: 20px;
-        width: 60px;
-        height: 40px;
-        border-style: none;
+        border: none;
+        width: 300px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
     }
-body
-{
-    background-color: #003366;
-    margin: 0;
-}
-main{
-    background-color: #003366;
-    width: 100%;
-    height: 170vh;
+    .Eventet{ 
+           position: relative;
+            left: 30px;
+            border: dotted;
+            width: 95%;
+            height: 100vh;
+            display: block;
+       
     }
-.News {
-    position: relative;
-    left: 4%;
-    border: dotted;
-    width: 94%;
-    height: 70vh;
+    .post{
+       border: dotted;
+        width: 100%;
+        height: 30vh;
+        display: flex; 
+        
+    }
+    .post h3{
+        
+       display: block;
+      text-align: center;
+      width: 100%;
+        font-size:30px;
+        color: whitesmoke;
+        position: relative;
+        left: 20%;
+        
+    }
+    .post p{
+      
     display: block;
-}
-.News h2{
+     color: whitesmoke;
+    position: relative;
+    right: 10%;
+    top: 35%;
+    font-size: 1.2em;
+    }
+    .post img{
+        position: relative;
+        left: 10px;
+        border-radius: 40px;
+        width: 80%;
+        height: 30vh;
+    }
     
-    color: whitesmoke;
+    .post1{
+        border: dotted;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+       
+    }
+    .post1 h3{
+       position: relative;
+       left: 30%;
+     
+    }
+    .post1 p{
+        position: relative;
+        top: 30%;
+        right:5% ;
+       
+    }
+    .post1 img{
+      
+        border-radius: 40px;
+        width: 30%;
+        height: 30vh;
+       
+      
+    }
+    .post2{
+    border: dotted;
+      color: white;
+        width:100%;
+        height:30vh ;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .post2 h3{
+        
+       width: 100%;
+        position: relative;
+        left: 30%;
+       
+    }
+    .post2 .tekst{
+        display: block;
+        width: 80%;
+    }
+    .post2 img{
+        border-radius: 30px;
+        width: 30%;
+        height: 30vh;
+        padding-right: 10px;
+    }
+    
+    
+    
+    footer{
     text-align: center;
-    font-size: 4.0em;
-}.News p{
-    color: whitesmoke;
-    width: 100%;
-}
-.postmain{
-    display: flex;
-}
-.photo1 {
-   
-display: block;
- 
-}
-.photo1 img{
-    position: relative;
-    left:8% ;
- width: 90%;
- height: 55vh;
-}
-.photo1 p{
-    display: block;
-    align-items: flex-start;
-  margin-left: 8%;  
-width: 90%;
-}
-footer {
-    color: whitesmoke;
-    text-align: center;
+    
+    font-size: 1.2em ;
+    background-color: #003366;
     height: 10vh;
-}
-.postmain p{
-    font-size: 18px;
-    font-style: ;
-}
+    }
+    footer h4{
+    position: relative;
+    top: 0%;
+    
+    }
+    
