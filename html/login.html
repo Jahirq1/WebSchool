@@ -3,44 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
     <link rel="stylesheet" href="../css/login.css">
-    <title>Log in</title>
 </head>
 <body>
-
-    <div class="log">
-        <div class="mas" id="message"></div>
-  <form id="login-form">
-    <h1>Log in</h1>
-    <select id="role" name="role" required>
-        <option value="taram">--Zgjidhni-statusin-tuaj:</option>
-        <option value="teacher">Mesues</option>
-        <option value="parent">Prind</option>
-        <option value="student">Nxenes</option>
-    </select>
-    <div class="id">
-    <label for="user-id"><svg width="60px" height="50px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 7V17C3.5 18.1046 4.39543 19 5.5 19H19.5C20.6046 19 21.5 18.1046 21.5 17V7C21.5 5.89543 20.6046 5 19.5 5H5.5C4.39543 5 3.5 5.89543 3.5 7Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15.5 10H18.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M15.5 13H18.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 10C11.5 11.1046 10.6046 12 9.5 12C8.39543 12 7.5 11.1046 7.5 10C7.5 8.89543 8.39543 8 9.5 8C10.0304 8 10.5391 8.21071 10.9142 8.58579C11.2893 8.96086 11.5 9.46957 11.5 10Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5.5 16C8.283 12.863 11.552 13.849 13.5 16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-    </label>
-   <input type="number" id="user-id" name="userId" required placeholder="Sheno ID tuaj">
-   </div>
-   <div class="id">
-   <label for="password" ><?xml version="1.0" encoding="utf-8"?>
-<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</label >
-   <input type="password" id="password" name="password" required placeholder="shenoni passwordin tuaj">
-   </div >
-    <button type="submit">Log in</button>
     
-  </form>
+    <div class="container">
+        <div class="form-box login">
+            <form action="">
+                <h1>Login</h1>
+                <select name="" id="" required>
+                    <option value="">zgjedhni nje profesion</option>
+                    <option value="">Student</option>
+                    <option value="">Arsimtar</option>
+                    <option value="">Profesor</option>
+                </select>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+           
+            </form>
+
+        </div>
+
+        <div class="form-box register">
+            <form action="">
+                <h1>Registration</h1> 
+                 <select name="" id="" required>
+                    <option value="">zgjedhni nje profesion</option>
+                    <option value="">Student</option>
+                    <option value="">Arsimtar</option>
+                    <option value="">Profesor</option>
+                </select>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                
+            </form>
+
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1 class="h1">Tung , Pershendetje!</h1>
+                <p>Nuk keni nje llograri ?</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1 class="h1">Mire se vini!</h1>
+                <p>keni nje llograri tashme ?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
     </div>
-    <script src="../script.js"></script>
+    
+
+
+
+
+
+    <script src="../js/login.js"></script>
 </body>
 </html>

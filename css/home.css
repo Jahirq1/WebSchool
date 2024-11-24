@@ -292,79 +292,81 @@ input[type="search"] {
 
 
 /* DIZAJNI I SEKTORIT TE LAJMES ===============*/
-
-
-.lajmet{
-  margin: 0;
-  width: 100%;
-  height: 650px;
-  display: flex;
-  align-items: center;
+ .lajmet{
   background-color: #003366;
-  color: white;
- 
-}
-.lajmet a {
-  position: relative;
-  bottom: 40%;
-  left: 46%;
-  text-decoration: solid;
-}
+  width: 100%;
+  height: 600px;
+  display: block;
+  align-content: center;
+  text-align: center;
+ }
+ .lajmet h1{
+  display: inline-flex;
 
-.lajmet a h1{
-  color: white;
   font-size: 40px;
+  color: white;
+  border-bottom: 1px solid;
+
+ }
+.slideri-1 {
+   width: 100%;
+   height: 500px;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   top: 1%;
 }
 
-.lajmet .post{
-  width: 500px;
-  height: 400px;
-  padding: 0 20px;
-  position: relative;
-  top: 15%;
+.slid{
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.post {
+  flex: 0 0 26.33%; 
   box-sizing: border-box;
-  border: 2px white;
+  padding: 10px;
+  flex-shrink: 0; 
+  background-color:transparent;
+  margin-right: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+}
+.post h3{
+  font-size: 20px;
+  padding: 5px;
+}
+.post img {
+  border-radius: 2px;
+  width: 100%;
+  height: 50%;
 }
 
-.lajmet .post1{
-  width: 500px;
-  height: 400px;
-  padding: 0 20px;
-  position: relative;
-  top: 15%;
-  box-sizing: border-box;
-  border: 2px white;
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.prev {
+  top: 35%;
+left: 15px; 
 }
 
-.lajmet .post2{
-  width: 500px;
-  height: 400px;
-  padding: 0 20px;
-  position: relative;
-  top: 15%;
-  box-sizing: border-box;
-  border: 2px white;
+.next {
+  top: 35%;
+right: 15px; 
 }
-
-
-
-
-.lajmet .post img{
-  width: 250px;
-  height: 250px;
-}
-.lajmet .post1 img{
-  width: 250px;
-  height: 250px;
-}
-.lajmet .post2 img{
-  width: 250px;
-  height: 250px;
-}
-
-
-
-
 
 
 /*Footeriii*/

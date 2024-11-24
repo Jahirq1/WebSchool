@@ -12,9 +12,9 @@
         <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Lajmet</a></li>
+            <li><a href="Lajmet.html">Lajmet</a></li>
             <li><a href="programet.html">Programet</a></li>
-            <li><a href="#">Eventet</a></li>
+            <li><a href="Eventet.html">Eventet</a></li>
             <li><a href="Kompeticionet.html">Kompeticionet</a></li>
         </ul>
         <a href="login.html"><button >Log in</button></a>
@@ -67,25 +67,47 @@
         <hr color="white">
 
      <!--- Sektori Lajmet -->
-        
      <section class="lajmet">
-        <a href=""><h1>Lajmet</h1></a>
-        <div class="post" >
-            <img src="../img/post/post.jpeg" alt="">
-            <h4>Fondacioni FIT</h4>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam veritatis expedita voluptas vitae fugit, obcaecati, modi officiis corporis ipsam rem, nobis non ad? Nostrum corporis soluta doloribus incidunt quidem sequi.</p>
-        </div>
-        <div class="post1">
-            <img src="../img/post/post1.png" alt="">
-            <h4>Hackathon</h4>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam veritatis expedita voluptas vitae fugit, obcaecati, modi officiis corporis ipsam rem, nobis non ad? Nostrum corporis soluta doloribus incidunt quidem sequi.</p>
-        </div>
-        <div class="post2">
-            <img src="../img/post/post2.jpeg" alt="">
-            <h4>Fondacioni GREEN</h4>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam veritatis expedita voluptas vitae fugit, obcaecati, modi officiis corporis ipsam rem, nobis non ad? Nostrum corporis soluta doloribus incidunt quidem sequi.</p>
-        </div>
+        <h1>Lajmet</h1>
+     <section class="slideri-1">
+        <button class="button next" onclick="leviz(1)">&#10095;</button>
+        <button class="button prev" onclick="leviz(-1)">&#10094;</button>
+  <div class="slid">
+    <div class="post">
+        <img src="../img/post-lajmet/post.jpg" alt="Post 1">
+        <h3>Misioni thelbsor i UBT-së</h3>
+        <p>Në Shkollën UBT, ne jemi të përkushtuar t’i pajisim nxënësit tanë me një arsimim të shquar cilësor, profesional dhe praktik, i cili është i lidhur me nevojat e tregut të punës dhe trendet globale në edukim, biznes dhe teknologji.</p>
+    </div>
+    <div class="post">
+        <img src="../img/post-lajmet/post1.png" alt="Post 1">
+        <h3>Gjimnazi UBT-së pjese e Erasmus+</h3>
+        <p>Gjatë një jave, nxënësit e UBT-së patën mundësinë të përjetonin një eksperiencë të pasur dhe shumëdimensionale në Helsinki dhe Karjalohja. Nën kujdesin e stafit të YSP Balkan dhe Drejtoreshës Ekzekutive, Prof. Ejona Icka, e cila gjithashtu është pedagoge në UBT, të rinjtë u angazhuan në leksione, aktivitete sportive, lojëra dhe vizita kulturore.</p>
+    </div>
+    <div class="post">
+        <img src="../img/post-lajmet/post2.jpg" alt="Post 1">
+        <h3>Shkolla e Mjekësisë dhe Gjimnazi UBT</h3>
+        <p>Vendi ideal i mësimit, kurrikula e bazuar në modele evropiane dhe amerikane, koncepti i mësimit CLASSROOM 3.0 i bazuar tërësisht në STEM (Shkencë, Teknologji, Inxhinieri dhe Matematikë), si dhe ambienti super atraktiv e bëjnë shkollimin e mesëm të lartë në UBT, unik dhe të suksesshëm për përgatitjen drejt studimeve akademike.</p>
+    </div>
+    <div class="post">
+        <img src="../img/post-lajmet/post3.jpg" alt="Post 1">
+        <h3>Java e Pikturave ne UBT</h3>
+        <p>Nxënësit e Shkollës së Mesme Profesionale dhe Gjimnazit UBT, kanë sfiduar vetën e tyre në pikturë, duke ndërlidhur muzikën si një mjet për të krijuar përmes tingujve me symbyllur një pikturë unike.</p>
+    </div>
+    <div class="post">
+        <img src="../img/post-lajmet/post5.jpg" alt="Post 1">
+
+        <h3>Një koncept i ri bazuar në teknologjitë </h3>
+        <p>Gjatë 20 viteve rrugëtim e zhvillim, tani po ofrojmë konceptin e ri të ekosistemit të bazuar në inovacion..</p>
+    </div>
+    <div class="post">
+        <img src="../img/post-lajmet/post4.jpg" alt="Post 1">
+        <h3>Partner ne rrugtimin tuaj</h3>
+        <p>Një rrugëtim i ri ka nisur për nxënësit e shkollave të mesme në UBT që një hap shumë të rëndësishëm të jetës së tyre ia besuan UBT-së, në hapjen zyrtare të Gjimnazit UBT dhe Shkollës së Mesme të Mjekësisë.</p>
+    </div>
+  </div>
+
     </section>
+     </section>
 
      <!--- footeri-->
     
@@ -97,7 +119,7 @@
     <!---- javascript  -->
     <script >
 
-
+let a =0;
         let currentIndex = 0;  
 const slides = document.querySelectorAll('.slide');  
 console.log('.slide');
@@ -111,6 +133,20 @@ function nextSlide() {
 
 
 setInterval(nextSlide, 5000);  
+
+    function leviz(drejtimi){
+        const b= document.querySelector(".slid");
+        const c=document.querySelectorAll(".post");
+        const totali=c.length;
+        a+=drejtimi;
+        if(a<0){
+            a=totali -3;
+        }
+        else if(a>totali-3){
+             a=0;
+        }
+       b.style.transform=`translateX(-${a * 20.33}%)`;
+    }
 
 
 </script>
