@@ -1,207 +1,207 @@
 *{
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
+   
 }
 
 
-/*Pjesa e headeritt   */
+/*Pjesa e headerit*/
 header {
-    box-sizing: border-box;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #003366;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  
+   box-sizing: border-box;
+   width: 100%;
+   height: 9vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   background-color: #003366;
+   position: sticky;
+   top: 0;
+   z-index: 100;
 }
 
 
 
 header nav ul {
-    list-style: none;
-    color: white;
-    display: inline-flex;
+   position: relative;
+   right: 30px;
+   list-style: none;
+   color: white;
+   display: inline-flex;
+   font-size: 1.3em;
 }
 
 nav ul li {  
-    cursor: pointer;
+   cursor: pointer;
 }
 nav ul li a{
-    color: white;
-   
-    padding: 10px 10px;
-    text-decoration: none;
+   color: white;
+  
+   padding: 10px 10px;
+   text-decoration: none;
 }
 .i1{
-    width: 90px;
-    height: 80px;
-    border-radius: 15px;
-    position: absolute;
-    left: 1%;
+   width: 90px;
+   height: 80px;
+   border-radius: 15px;
+   position: absolute;
+   left: 1%;
 }
 
 
 #p6{
-        margin-right:20px ;
-        border-radius: 20px;
-        width: 60px;
-        height: 40px;
-        border-style: none;
-    }
-
-/*Pjesa main*/
-   
-body {
-   
-   background: linear-gradient(135deg, #003366, );
-   font-family: Arial, sans-serif;
-   color: whitesmoke;
+       margin-right:20px ;
+       border-radius: 20px;
+       width: 60px;
+       height: 40px;
+       border-style: none;
+       position: relative;
+       right: 10px;
+       top: 20px;
+   }
+body
+{
+   background-color: #003366;
    margin: 0;
- }
- main{
-    background-color:#003366;
-    width: 100%;
-    height: 1000px;
-    }
-    .p-title{
-        font-size: 2.5em;
-        color: white;
-        font-family:font-family: Georgia, serif;
-        position: relative;
-        left: 70px;
-        top: 10px;
-    }
-    main input{
-      background-image: url('img.jpg');
-        position: relative;
-        left: 40%;
-        background-color: #e6e6e6;
-        width: 300px;
-        height: 30px;
-        border: none;
-        border-radius: 10px;
-        text-align: center;
-        font-family: 'Fantasy', sans-serif;
-        cursor: pointer;
-    }
-    .Lajmet{
-        position: relative;
-        top: 10px;
-      display:block;
-      width: 100%;
-      height: 650px;
-    }
-   .post{
-   /* border-style: dotted;*/
-    width: 90%;
-    height: 200px;
-   
-     
 }
- .post h3{
-    font-size: 30px;
-    display: inline;
-    position: relative;
-    left: 35%;
- }
- .post p{
-   
-    width: auto;
-    position: relative;
-    top: 20%;
-    left: 5%;
-  
- }
- .post img{
-    background-color: none;
-    border: none;
-    border-radius: 40px;
-   width: 29%;
-    height: 22vh;
-   float: left;
-  
- }
- .post1{
-   /* border: dotted;*/
-    width:95% ;
-    height: 200px;
-    display: flex;
-
- }
- .post2{
-  /*  border: dotted;*/
-    width:95% ;
-    height: 200px;
-    display: flex;
-
- }
- .post1 h3{
-   
-   font-size: 30px;
+main{
+   background-color: #003366;
+   width: 100%;
+   height: 150vh;
+   }
+.News {
    position: relative;
-   left: 34%;
-  
- }
- .post1 p{
-    
-    width: auto;
-    position: relative;
-    right: 5%;
-    top: 20%;
-    
+   left: 4%;
    
- }
- .post1 img{
- 
-    border-radius: 40px;
-    position: relative;
-    top:10px ;
-    bottom: 10px;
-    width: 65%;
-    height: 22vh;
-    float: left; 
+   width: 94%;
+   height: 70vh;
+   display: block;
+}
+.News h2{
    
- }
- .post2 h3{
-   display: inline;
-  font-size: 30px ;
-  text-align: center;
+   color: whitesmoke;
+   text-align: center;
+   font-size: 4.0em;
+}
+.News p{
+   color: whitesmoke;
+   width: 100%;
+}
+.postmain{
+   display: flex;
+}
+.photo1 {
   
+display: block;
+
+}
+.photo1 img{
+   position: relative;
+   left:8% ;
+width: 90%;
+height: 55vh;
+border-radius: 20px;
+}
+.photo1 p{
+   display: block;
+   align-items: flex-start;
+ margin-left: 8%;  
+width: 90%;
+}
+footer {
+   color: whitesmoke;
+   text-align: center;
+   height: 8vh;
+}
+.footer h4 {
+   position: relative;
+    bottom: 40px;
+}
+.postmain p{
+   font-size: 18px;
+  
+}
+.slider {
+   position: relative;
+   padding: 20px;
+   background-color: #003366;
+}
+.titulli{
+   display: inline-block; 
+   margin: 0;
   position: relative;
-  left: 34%;
-
- }
- .post2 p{
-    width: auto;
-    position: relative;
-    top: 20%;
-    right: 4%;
- }
- .post2 img{
-    background-color: none;
-    border: none;
-    width: 60%;
-    height: 20vh;
-    float: left;
-    border-radius: 40px;
-    position: relative;
-    top: 20px;
- }
- h4{
-   position: relative;
-   top: 40px;
-    text-align: center;
- 
- }
-
-
- footer{
-    color:black;
-    width: 100%;
-    height: 10vh;
-    background-color: #003366;
- }
+  left: 48%;
+}.hr1{
+   width: 100%;
+   height: 2px; 
+   border: none;
+   background-color: whitesmoke; 
+   margin: 5px auto 0; 
    
+}
+.Headline {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 2.8em;
+   color: whitesmoke;
+}
+
+/* Slider Container */
+.slider-container {
+   display: flex;
+   overflow-x: auto; 
+   scroll-behavior: smooth; 
+   gap: 20px; 
+   padding: 10px 0; 
+}
+
+
+.post-card {
+   flex: 0 0 250px; 
+   background: #fff;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   text-align: center;
+   padding: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumb {
+   width:100%;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
+
+
+/*  Butonat e sliderit */
+button {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: rgba(255, 255, 255, 0.8); 
+   border: none;
+   cursor: pointer;
+   z-index: 10; 
+   padding: 10px;
+   border-radius: 50%; 
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button img {
+   width: 26px; 
+   height: auto;
+}
+
+.pre-btn {
+   left: 10px; 
+}
+
+.nxt-btn {
+   right: 10px;
+}
+
+
+button:disabled {
+   background: rgba(200, 200, 200, 0.8);
+   cursor: not-allowed;
+}
