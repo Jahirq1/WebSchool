@@ -17,6 +17,7 @@ body{
    background-repeat: no-repeat;
 }
 
+
 .container{
     position: relative;
     width : 850px;
@@ -100,7 +101,16 @@ select{
     color: #333;
     font-weight: 500;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;  
+    appearance: none;            
+}
 .input-box input::placeholder {
     color: #888;
     font-weight: 400;
