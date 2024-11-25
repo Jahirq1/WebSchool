@@ -11,20 +11,20 @@
     
     <div class="container">
         <div class="form-box login">
-            <form action="">
+            <form action="" id="login-form">
                 <h1>Login</h1>
-                <select name="" id="" required>
+                <select name="profesioni" id="profesioni"  required>
                     <option value="">zgjedhni nje profesion</option>
-                    <option value="">Student</option>
-                    <option value="">Arsimtar</option>
-                    <option value="">Profesor</option>
+                    <option value="Student">Student</option>
+                    <option value="Arsimtar">Arsimtar</option>
+                    <option value="Prind">Prind</option>
                 </select>
                 <div class="input-box">
-                    <input type="number" placeholder="Id e perdoruesit" required>
+                    <input type="number" name="id" id="id" placeholder="Id e perdoruesit" required>
                     <i class="bx bxs-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Fjalekalimi" required>
+                    <input type="password" id="fjalkalimi" placeholder="Fjalekalimi" required>
                     <i class="bx bxs-lock-alt"></i>
                 </div>
                 
@@ -35,24 +35,24 @@
         </div>
 
         <div class="form-box register">
-            <form action="">
+            <form action="" id="regjistrimi">
                 <h1>Registration</h1> 
-                 <select name="" id="" required>
+                 <select name="profesioni-r" id="profesioni-r" required>
                     <option value="">zgjedhni nje profesion</option>
-                    <option value="">Student</option>
-                    <option value="">Arsimtar</option>
-                    <option value="">Profesor</option>
+                    <option value="Student">Student</option>
+                    <option value="Arsimtar">Arsimtar</option>
+                    <option value="Prind">Prind</option>
                 </select>
                 <div class="input-box">
-                    <input type="number" placeholder="Shenoni ID" required>
+                    <input type="number" id="id-r" name="id-r" placeholder="Shenoni ID" required>
                     <i class="bx bxs-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Fjalkalimi" required>
+                    <input type="password" id="paswordi-r" name="paswordi-r" placeholder="Fjalkalimi" required>
                     <i class="bx bxs-envelope"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Rishkruaj fjalkalimin" required>
+                    <input type="password"  name="paswordi-r1" id="paswordi-r1" placeholder="Rishkruaj fjalkalimin" required>
                     <i class="bx bxs-lock-alt"></i>
                 </div>
                 <button type="submit" class="btn">Register</button>
