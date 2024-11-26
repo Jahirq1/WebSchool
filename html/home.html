@@ -146,41 +146,7 @@
 
     <!---- javascript  -->
     <script>
-      document.getElementById("kontakti").addEventListener("submit",function(eventi){
-       var name=document.getElementsByName("emri")[0].value;
-       var email=document.getElementsByName("email")[0].value;
-       var mesazhi=document.getElementsByName("mesazhi")[0].value;
-       
-       if (name.trim() === "") {
-      alert("Ju lutem, plotesoni emrin dhe mbiemrin.");
-      event.preventDefault(); 
-      return false;
-    }
-    if (email.trim() === "") {
-      alert("Ju lutem, plotesoni email-in.");
-      event.preventDefault(); 
-      return false;
-    }
-    if (mesazhi.trim() === "") {
-      alert("Ju lutem, plotesoni kërkesën tuaj.");
-      event.preventDefault(); 
-      return false;
-    }  
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      if(!emailPattern.test(email)){
-        alert("Ju lutem , plotsoni nje email te vlefshem . ");
-        event.preventDefault();
-        return false;
-      }
-
-
-        alert("Formulari eshte derguar me sukses ");
-       return true;
-
-
-
-
-});
+  
 
 
         let a = 0;
