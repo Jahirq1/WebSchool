@@ -38,7 +38,7 @@ header nav ul li a{
   font-size: 19px;
 }
 ul li a:hover{
-  color:yellow;
+  
   cursor: pointer;
   text-decoration: underline;
 }

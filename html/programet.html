@@ -4,156 +4,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Program Page</title>
-<style>
-    /* General styling */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #3259dc;
-    }
-
-    /* Header styling */
-    header {
-        background-color: #3259dc;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
-    header nav a {
-        color: white;
-        margin-right: 10px;
-        margin-left: 5px;
-        text-decoration: none;
-    }
-    header nav a:hover {
-        text-decoration: underline;
-    }
-    .login-btn {
-        background-color:white;
-        color: #4A5785;
-        padding: 5px 10px;
-        border-radius: 5px;
-        text-decoration: none;
-    }
-
-    /* Main container styling */
-    .container {
-        padding: 20px;
-    }
-    .container h1{
-        color: white;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-.container label{
-
-margin-left: 1200px;
-border-radius: 30px;
+<link rel="stylesheet" href="../css/programet.css">
 
 
-}
-    /* Content layout */
-    .content {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .content .right-section {
-        flex: 1;
-        height: 300px;
-        background-color:white;
-        padding: 20px;
-        flex: 1;
-        border-radius: 20px;
-    }
- 
-    
-    .content .left-section {
-        background-color:white;
-        padding: 20px;
-        border-radius: 20px;
-        flex: 1;
-        height: 350px;
-      
-       
-    }
-    /* Dropdown and button styling */
-    
-
-    .program-plan {
-        background-color:white;
-        padding: 10px;
-        text-align: center;
-        margin-top: 30px;
-        border-radius: 8px;
-        text-decoration: none;
-        color: black;
-        margin-left:1000px;
-        width: 300px;
-  
-    }
-    h3{
-
-background-color: white;
-width: 300px;
-height: 30px;
-
- }
- .container k{
-border-radius: 40px;
-background-color: white;
-width: 170px;
-height: 30px;
-position:right;
-
- }
- 
-</style>
 </head>
 <body>
-
-<header>
-   
-    <div class="logo"></div>
-    <h2 class="k"></h2>
-    <nav>
-       
-        <a href="home.html">Home</a>
-        <a href="Lajmet.html">News</a>
-        <a href="programet.html">Programs</a>
-        <a href="Eventet.html">Events</a>
-        <a href="Kompeticionet.html">Competitions</a>
-        <a href="login.html" class="login-btn">Log in</a>
+    <header>
+        <img src="../img/ubt-logo-img1.png" alt="">
+        <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Lajmet.html">Lajmet</a></li>
+            <li><a href="programet.html">Programet</a></li>
+            <li><a href="Eventet.html">Eventet</a></li>
+            <li><a href="Kompeticionet.html">Kompeticionet</a></li>
+        </ul>
+        <a href="login.html"><button >Log in</button></a>
     </nav>
-</header>
-
-<div class="container">
-
-    <h1>
-        Programet
-    </h1>
-   
-    <label href="k"><select name="Zgjedh drejtimin" id="k"><option value="drejtimi pare">Zgjedh drejtimin</option></select>
-   </label>
-        <br>
-    <h3>Titulli</h3>
+    </header>
+  
     <div class="content">
-        
-        
-        <div class="left-section">
-           
-            <p>Teksti</p>
+        <div class="right">
+            <img src="../img/post/post4.jpeg" alt="">
         </div>
-        
-        <div class="right-section">
-          
-        </div>
-    </div>
 
-    <a href="#" class="program-plan">Plan-programi</a>
-</div>
+        <div class="left-section">   
+            <div class="container">
+                <div class="programet">
+                <h1> Programet</h1>
+                <label class="dropdown" for="drejtimin"></label>
+                <select name="drejtimin" id="drejtimin">
+                    <option value="" hidden>Zgjedh drejtimin</option>
+                    <option value="Shkenca natyrore">Shkenca Natyrore</option>
+                    <option value="Shkenca shoqerore">Shkenca Shoqerore</option>
+                    <option value="Mjeksi">Mjeksi</option>
+                    <option value="Teknologji informacioni">Teknologji informacioni</option>
+                </select>
+               
+                </div>
+            </div>
+            <p>Gjimnazi UBT është shkollë e mesme, e cila kombinon mësimdhënien
+                kurrikulare me teknologjinë e informacionit – Classroom 3.0.
+                Përmes ofrimit të një arsimi të gjerë, të bazuar në dije e të orientuar në
+                gjeneratën e ardhshme të teknologjisë, Gjimnazi ynë do t’u mundësojë
+                nxënësve që t’i zbulojnë pikat e tyre të forta dhe të arrijnë standardet më
+                të larta.
+                Përfundimin e Gjimnazit UBT nxënësit do ta kurorëzojnë me shumë
+                njohuri të fituara, aftësi të zbuluara e kualifikime të arritura, me të cilat
+                do ta ndërtojnë suksesshëm të ardhmen e tyre.
+                Një ambient frymëzues, me mësimdhënës të mirëkualifikuar, të
+                dëshmuar e inovativë, me klasa moderne e praktike, me hapësira të
+                veçanta për argëtim, edukim fizik e mësim praktik, Gjimnazin UBT e
+                bëjnë unik e të pakonkurrencë në ndërtimin e gjeneratës së artë të
+                Kosovës.
+                Gjimnazi do të nxisë zhvillimin e talentit të nxënësve dhe eksplorimin e
+                potencialit të tyre, në mënyrë që ata të jenë të gatshëm për të përdorur
+                mundësitë e përkufizuara të së ardhmes.
+                Classroom 3.0 do të jetë një fushë e veçantë e fokusit të gjimnazit tonë
+                për të nxitur dhe zhvilluar talentet e reja, duke kërkuar përsosmërinë
+                edhe jashtë aktivitetit të rregullt mësimor.
+                Gjimnazi UBT, krahas mësimit kurrikular, u mundëson nxënësve që të
+                punojnë edhe në projekte të veçanta, në aktivitete jashtëshkollore, të
+                angazhohen në ngjarje të ndryshme e të zhvillojnë talentet e tyre në
+                laboratorët e ndryshëm të Parkut Shkencor Inovativ të UBT-së.
+                Pishinë noti, ushtrime fizike, salla tenisi, fusha futbolli, basketbolli e volejbolli, laboratorë mjekësorë e kimikë, serra të veçanta të prodhimeve bio
+                ushqimore, do të krijojnë momente të paharrueshme e atmosferë të
+                papërshkrueshme pozitive e frymëzuese për secilin nxënës.</p>
+                
+                <nav class="linkat">
+            
+                    <a href="a" class="ka">Broshura-infos</a>
+                   <a href="#" class="ka">Plan-programi</a>
+                   </nav>
+            </div>
+           </div>    
+       
+       
+   
+            
 
+<footer>
+    <hr color="white">
+    <h4>copyrights &#169 all rights reserved from UBT</h4>
+</footer>
+<script src="../js/programet.js"></script>
 </body>
-</html>
+</html> 
