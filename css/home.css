@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+  background-color: #003366;
+}
 
 /*Navbari dizajni*/
 header{
@@ -15,7 +18,7 @@ header{
   position: sticky;
   top: 0;
  z-index: 100;
- overflow: visible;
+ overflow: hidden;
  box-shadow: 2px 2px 2px gray;
 }
 
@@ -38,7 +41,7 @@ header nav ul li a{
   font-size: 19px;
 }
 ul li a:hover{
-  color:yellow;
+  
   cursor: pointer;
   text-decoration: underline;
 }
@@ -53,8 +56,8 @@ nav button{
 }
 
 nav button:hover{
-  background-color: aqua;
-  color: white;
+ text-decoration: underline;
+
   cursor: pointer;
   font-weight: 400;
   font-style: bold;
@@ -93,7 +96,6 @@ header img{
   color: white;
 }
 .slider-container .teksti h1{
-  
     font-size: 3rem;
     border-right: 3px solid white;
     padding-right: 5px;
@@ -140,12 +142,13 @@ input[type="search"] {
 .slider {
   display: flex;
   width: 100%;
-  height: 750px; 
-  transition: transform 0.5s ease-in-out;
+  height: 650px ; 
+  transition: transform 0.8s ease-in-out;
 }
 
 .slide {
   width: 100%; 
+  height: auto;
   flex: 0 0 100%;
 }
 
@@ -160,35 +163,42 @@ input[type="search"] {
 /*NEN DIZAJN I SEKTIONIT TE DYT HERO*/
 .sub {
   background-color: #003366;
-   width: auto;
+   width:100%;
    height: 650px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub .left{
+  width: 50%;
+  height: 650px;
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+}
+.sub .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 650px ;
 }
 .sub img{
   border-style: none;
-  position: relative;
-  left: 80%;
- top: 15%;
   width: 500px;
   height: 450px;
   border-radius: 30px;
 }
 .sub h1{
-  width: 510px;
-  height: 20px;
-  position: relative;
-  top: 30%;
-  left: 15%;
+   text-align: start;
   font-size: 70px;
   color: white;
 }
 .sub button{
   width: 200px;
   height: 50px;
-  position: relative;
-  top: 0%;
-  left: 40%;
   border-style: none;
   border-radius: 40px;
   color: #3259dc;
@@ -202,42 +212,22 @@ input[type="search"] {
    cursor: pointer;
   }
 .sub p{
-  width: auto;
-  height: 10px;
-  position: relative;
-  right: 34%;
-  top: 53%;
   color: white;
+  margin-bottom: 50px;
 }
 /*Promocioni*/
 .promotion{
-  width: 900px;
-  height: 400px;
-  display: block;
-  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 400px auto;
+  display: flex;
   align-items: center;
-  position: relative;
-  left: 20%;
+  text-align: center;
+  flex-direction: column;
 }
 .promotion img{
-  width: 400px;
+  width: 300px;
   height: 200px;
-  position: relative;
-
-  left: 25%;
-  top: 15%;
-}
-.promotion .h1{
-  position: relative;
-  top: 10%;
-  left: 25%;
-  z-index: 2;
-}
-.promotion .h3{
-  position: relative;
-  top: 23%;
-  z-index: 2;
-  left: 25%;
 }
 
 /* DIZAJNI I SEKTORIT TE LAJMES ===============*/
@@ -406,6 +396,7 @@ right: 15px;
 .form .adresa h3{
   padding-top: 5px;
   padding-left: 10px;
+  font-size: 14px auto;
 }
 
 

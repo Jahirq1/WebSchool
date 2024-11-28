@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gjimnazi UBT</title>
+    <title>Gjimnazi-UBT</title>
 </head>
 
 <body>
@@ -42,12 +42,17 @@
 
     <!--- nen faqja -->
     <section class="sub">
-        <div class="su">
-            <h1>Pse <em>duhet te</em><br>zgjedhesh UBT ? </h1>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScbNxBMbMkigRvtDTy-NjXeU1O5_Zc3teOwsfuGVsilmgT3gQ/viewform?usp=sf_link"> <button>Apliko tani</button></a>
-            <img src="../img/ubtpost1.png" alt="">
+        <div class="right">
+            <div class="t">
+            <h1>Pse <em>duhet te</em><br>zgjedhesh UBT ? </h1></div>
+            <div class="t1">
+        <p>qe nga 2004 UBT lider ne arsim te ulet dhe te lart</p></div class="t2">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScbNxBMbMkigRvtDTy-NjXeU1O5_Zc3teOwsfuGVsilmgT3gQ/viewform?usp=sf_link"> <button>Apliko tani</button></a>
         </div>
-        <p>qe nga 2004 UBT lider ne arsim te ulet dhe te lart</p>
+</div>
+        <div class="left">
+        <img src="../img/ubtpost1.png" alt="">
+        </div>
     </section>
 
     <!--- promotion sektori-->
@@ -146,41 +151,7 @@
 
     <!---- javascript  -->
     <script>
-      document.getElementById("kontakti").addEventListener("submit",function(eventi){
-       var name=document.getElementsByName("emri")[0].value;
-       var email=document.getElementsByName("email")[0].value;
-       var mesazhi=document.getElementsByName("mesazhi")[0].value;
-       
-       if (name.trim() === "") {
-      alert("Ju lutem, plotesoni emrin dhe mbiemrin.");
-      event.preventDefault(); 
-      return false;
-    }
-    if (email.trim() === "") {
-      alert("Ju lutem, plotesoni email-in.");
-      event.preventDefault(); 
-      return false;
-    }
-    if (mesazhi.trim() === "") {
-      alert("Ju lutem, plotesoni kërkesën tuaj.");
-      event.preventDefault(); 
-      return false;
-    }  
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      if(!emailPattern.test(email)){
-        alert("Ju lutem , plotsoni nje email te vlefshem . ");
-        event.preventDefault();
-        return false;
-      }
-
-
-        alert("Formulari eshte derguar me sukses ");
-       return true;
-
-
-
-
-});
+  
 
 
         let a = 0;
