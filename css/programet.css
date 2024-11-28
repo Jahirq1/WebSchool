@@ -45,7 +45,6 @@ text-decoration: none;
 font-size: 19px;
 }
 ul li a:hover{
-color:white;
 cursor: pointer;
 text-decoration: underline;
 }
@@ -60,8 +59,7 @@ font-weight: 500;
 }
 
 nav button:hover{
-background-color: aqua;
-color: white;
+text-decoration: underline;
 cursor: pointer;
 font-weight: 400;
 font-style: bold;
@@ -123,6 +121,7 @@ z-index: 1;
     justify-content: center;
     margin-bottom: 10%;
     overflow: hidden;
+    margin-top: 50px;
 }
  
 .content img{

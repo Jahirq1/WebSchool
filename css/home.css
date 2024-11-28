@@ -56,8 +56,8 @@ nav button{
 }
 
 nav button:hover{
-  background-color: aqua;
-  color: white;
+ text-decoration: underline;
+
   cursor: pointer;
   font-weight: 400;
   font-style: bold;
