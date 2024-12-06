@@ -9,22 +9,27 @@
 </head>
 
 <body>
-    <header>
-        <img src="../img/ubt-logo-img1.png" alt="">
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Lajmet.html">Lajmet</a></li>
-                <li><a href="programet.html">Programet</a></li>
-                <li><a href="Eventet.html">Eventet</a></li>
-                <li><a href="Kompeticionet.html">Kompeticionet</a></li>
-            </ul>
-            <a href="login.html"><button>Log in</button></a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="brand-title"><img src="../img/ubt-logo-img1.png" alt=""></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Lajmet.html">Lajmet</a></li>
+            <li><a href="programet.html">Programet</a></li>
+            <li><a href="Eventet.html">Eventet</a></li>
+            <li><a href="Eventet.html">Kompeticionet</a></li>
+            <li><a href="login.html"><button>log in</button></a></li>
+        </ul>
+        </div>
+      </nav>
     <section class="slider-container">
         <div class="teksti">
-            <h1>MIRE SE VINI NE UBT</h1>
+            <h1 class="h1">MIRE SE VINI NE UBT</h1>
             <input type="search" id="searchInput" placeholder="search">
         </div>
         <div class="slider">
@@ -151,7 +156,12 @@
 
     <!---- javascript  -->
     <script>
-  
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 
 
         let a = 0;
