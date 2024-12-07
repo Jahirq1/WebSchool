@@ -8,19 +8,25 @@
   
 </head>
 <body>
-    <header>
-        <img class="i1" src="../img/post/ubt-logo-img.png" alt="">
-    <nav>
-   <ul>  
-    <li><a id="p1" href="home.html">Home</a></li>
-    <li> <a id="p2" href="Lajmet.html">Lajmet</a></li>
-    <li> <a id="p3" href="programet.html">Programet</a></li>
-    <li><a id="p4" href="Eventet.html">Eventet</a></li>
-    <li><a id="p5" href="Kompeticionet.html">Kompeticionet</a></li>
-</ul>  
-<a href="login.html"><button class="p6">Log in</button> </a>
-</nav>
-    </header>
+    <!--Pjesa e navbarit-->
+    <nav class="navbar">
+        <div class="brand-title"><img src="../img/ubt-logo-img1.png" alt=""></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Lajmet.html">Lajmet</a></li>
+            <li><a href="programet.html">Programet</a></li>
+            <li><a href="Eventet.html">Eventet</a></li>
+            <li><a href="Eventet.html">Kompeticionet</a></li>
+            <li><a href="login.html"><button>Log in</button></a></li>
+        </ul>
+        </div>
+      </nav>
 <hr>
 <main>
     <section class="News ">
@@ -48,10 +54,10 @@
     Në përmbledhje, UBT ofron një mundësi të shkëlqyer arsimimi për të rinjtë që dëshirojnë të zhvillojnë aftësi praktike dhe profesionale në fushat e teknologjisë dhe menaxhimit. Përkushtimi i saj për të ofruar një arsim të cilësisë së lartë, përgatitja praktike dhe bashkëpunimi me industrinë bëjnë që UBT të jetë një mundësi ideale për ata që kërkojnë të ndërtojnë një karrierë të suksesshme.</p>   
 </div>
 </section>
-<!---Pjesa  e sliderit-->
+<!---Pjesa  e sliderit te lajmeve -->
 <section class="slider">
     <div class="titulli">
-    <h2 class="Headline">Lajmet</h2>
+    <h2 class="Headline">Lajmet </h2>
     <hr class="hr1">
     </div>
     <button class="pre-btn"><img src="../img/post/img prev1.png " alt="Prev"></button>
@@ -100,7 +106,17 @@
     </div>
     <button class="nxt-btn"><img src="../img/post/imgnext.png" alt="Next"></button>
 </section>
+<!--Pjesa e javascript per toggle bar-->
+<script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+
+</script>
 </main>
 <hr>
 <footer>
