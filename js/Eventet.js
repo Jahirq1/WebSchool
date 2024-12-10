@@ -1,11 +1,8 @@
-const button = document.querySelector('.moreEventeButton');
-const post4 = document.querySelector('.post3');
-
-button.addEventListener('click', () => {
-    post4.classList.toggle('show');
-    if (post4.classList.contains('show')) {
-        button.textContent = "Mbylle kete pjesen"; 
+document.getElementById('moreEventsButton').addEventListener('click', function() {
+    var post3 = document.getElementById('post3');
+    if (post3.style.display === 'none' || post3.style.display === '') {
+        post3.style.display = 'flex'; // Bën të dukshëm postimin e tretë
     } else {
-        button.textContent = "Kliko per te shfaqur me shum"; 
+        post3.style.display = 'none'; // Mund ta fshehësh përsëri nëse dëshiron
     }
 });
