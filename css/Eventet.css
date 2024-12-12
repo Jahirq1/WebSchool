@@ -51,21 +51,21 @@
     text-decoration: underline;
   }
   .navbar-links button{
-    background-color: #003366;
-    color: white;
+    background-color: #fff;
+    color: #003366;
+    outline: none;
     border: solid white; 
     text-align: center;
     width: 70px;
-    height: 45px;
-    border-radius: 30px;
+    height: 25px;
+    border-radius: 10px;
     margin-bottom: 10px;
     position: relative;
-    bottom: 10px;
- 
   }
-  .navbar-links button:hover{
-    background-color: whitesmoke;
- }
+  .navbar-links button:hover {
+    text-decoration: underline;
+   cursor:  pointer;
+  }
    
   .toggle-button {
     position: absolute;

@@ -27,7 +27,8 @@
  .navbar-links {
    height: 90%;
    position: relative;
-   right: 5%;
+   top: 10px;
+  
  }
 
  .navbar-links ul {
@@ -39,7 +40,10 @@
  .navbar-links li {
    list-style: none;
  }
- 
+ .navbar-links{
+   margin-bottom: 5px;
+   align-items: center;
+}
  .navbar-links li a {
    display: block;
    text-decoration: none;
@@ -52,16 +56,23 @@
    text-decoration: underline;
  }
  .navbar-links button{
-   background-color: #003366;
-   color: white;
-   border: solid white; 
+   background-color: #fff;
+   color: #003366;
+   outline: none;
+   border: 1px solid #fff;
    text-align: center;
-   width: 70px;
-   height: 45px;
-   border-radius: 30px;
+   width: 80px;
+   height: 25px;
+   border-radius: 10px;
 
  }
+ .navbar-links button:hover{
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
  .toggle-button {
+   
    position: absolute;
    top: .75rem;
    right: 1rem;
@@ -197,7 +208,7 @@ footer h4 {
 
 
 /*  Butonat e sliderit */
-button {
+.button {
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
@@ -222,9 +233,7 @@ button img {
 .nxt-btn {
    right: 10px;
 }
-button:hover {
-    background-color: whitesmoke;
-}
+
 
 
 button:disabled {
