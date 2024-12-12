@@ -3,17 +3,21 @@
     padding: 0;
     box-sizing: border-box;
  }
- 
- 
- .navbar-links {
-  display: flex;
-  justify-content: flex-end; 
-  align-items: center;
-  position: relative; 
-  right: 0; 
-  gap: 20px; 
-}
 
+ 
+
+ .navbar {
+height: 60px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba( 0, 51, 102, 0.2 );
+    backdrop-filter: blur( 20.5px );
+  margin-bottom: 5px;
+    color: white;
+    
+  }
   
   .brand-title img {
     margin-top: 10px;
@@ -22,17 +26,13 @@
     height: 50px;
   }
   
-  .navbar-links {
-    height: 90%;
-    position: relative;
-    right: 5%;
-
-}
+  
  
   .navbar-links ul {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-top: 50px;
   }
   
   .navbar-links li {
@@ -46,25 +46,32 @@
     padding: 1rem;
   }
   
-  
+  .navbar-links{
+    margin-bottom: 10px;
+    align-items: center;
+}
   .navbar-links li a:hover {
     text-decoration: underline;
   }
   .navbar-links button{
-    background-color:white;
-    color:#003366;
-    border: solid white; 
-    text-align: center;
-    width: 70px;
-    height: 45px;
-    border-radius: 30px;
- 
+    background-color: #003366;
+   color: white;
+   border: solid white; 
+   text-align: center;
+
+   border-radius: 30px;
+   width: 70px;
+   height: 35px;
+
   }
+  
+  
   .navbar-links button:hover {
-    text-decoration: underline;
-    color:black;
-    background-color: aqua;
-  }
+     text-decoration: underline;
+     color:black;
+     background-color: aqua;
+   }
+ 
   
   .toggle-button {
     margin-top: 20px;
@@ -259,6 +266,7 @@ select option {
 @media (max-width: 600px) {
   
   .navbar {
+    height: auto;
       flex-direction: column;
       align-items: flex-start;
       padding: 10px;
@@ -298,6 +306,7 @@ select option {
       width: 80px;
       height: 40px;
       font-size: 14px;
+      
   }
 
   .navbar-links.active {
@@ -354,6 +363,7 @@ select option {
 @media (max-width: 400px) {
 
     .navbar {
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
