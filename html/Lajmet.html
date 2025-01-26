@@ -125,3 +125,32 @@ toggleButton.addEventListener('click', () => {
 <script src="../js/Lajmet.js"></script>
 </body>
 </html>
+<?php
+require 'db.php'; // Importo lidhjen me bazën e të dhënave.
+
+// Merr lajmet nga tabela "posts"
+$sql = "SELECT * FROM posts ORDER BY id DESC"; // Të renditen nga më i fundit.
+$result = $conn->query($sql);
+
+// Kontrollo nëse ka lajme
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo '<div class="post-card">';
+        echo '<img src="' . htmlspecialchars($row['image_url']) . '" class="product-thumb" alt="' . htmlspecialchars($row['title']) . '">';
+        echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+        echo '<p>' . htmlspecialchars($row['content']) . '</p>';
+        
+        // Butoni për fshirjen
+        echo '<form action="delete_news.php" method="POST" onsubmit="return confirm(\'A jeni i sigurt që dëshironi të fshini këtë lajm?\');">';
+        echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+        echo '<button type="submit" class="delete-btn">Fshi</button>';
+        echo '</form>';
+        
+        echo '</div>';
+    }
+} else {
+    echo "<p>Nuk ka lajme për momentin.</p>";
+}
+
+$conn->close();
+?>
