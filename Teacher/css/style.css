@@ -1,0 +1,57 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9; /* Ngjyrë e lehtë për të pasur një pamje të pastër */
+     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hije për theksimin e elementit */
+    max-width: 90%;
+    left: 9%;
+    height: 10vh;
+    margin-top: 2%;
+    z-index: 100;
+    font-family: Arial, sans-serif; /* Fonti për formën */
+  }
+  .form form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+.form form input{
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #003366;
+    background-color: #f9f9f9;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form form label{
+    margin-right: 10px;
+}
+
+.form form input[type=submit]:hover{
+    background-color: #003366;
+    color: #f9f9f9;
+
+}
+
+.subject-link{
+  color: green;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table input{
+  width: 200px;
+  padding: 5px;
+   outline: none;
+  border: 1px solid blue;
+  border-radius:2px ;
+  text-align: center;
+}
+
