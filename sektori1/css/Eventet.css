@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+    /*Pjesa e navbarit*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba( 0, 51, 102, 0.2 );
+    backdrop-filter: blur( 20.5px );
+    color: white;
+
+
+  }
+  
+  .brand-title img {
+    margin-top: 10px;
+    margin-left:10px;
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
+
+  }
+  
+  .navbar-links {
+    height: 90%;
+    position: relative;
+    top: 10px;
+    right: 0%;
+  }
+ 
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+  }
+  
+  
+  .navbar-links li a:hover {
+    text-decoration: underline;
+  }
+  .navbar-links button{
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    border: solid white; 
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .navbar-links button:hover {
+    text-decoration: underline;
+   cursor:  pointer;
+  }
+   
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  /*navbari dizajni ===============================================================*/
+  
+  /*pjesa e headerit =====================================================*/
+       body{
+        background-color: #000;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+       }
+       .span{
+         display: flex;
+         justify-content: space-between;
+         width: 90%;
+       }
+    .p-titulli{
+        font-size:2.5em ;
+        color: whitesmoke;
+        font-family:Georgia, serif;
+        font-size: 3.0em;
+        position: relative;
+        left: 10%;
+        top: 10px;
+    }
+    main input{
+        margin-top: 20px;
+        border-radius: 20px;
+        border: none;
+        width: 350px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+    }
+    .Eventet{ 
+           position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+            width: 100% ;
+            height: 140vh auto;
+           overflow-y: auto;
+    }
+    .post{
+        color: white;
+        width: 95%;
+        height:30vh ;
+       display: flex;
+       flex-direction: row;
+        border: 1px solid #fff;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+       overflow: hidden;
+    }
+    .post .photo{
+        width: 30%;
+        height: auto;
+
+    }
+    .post h3{
+        width:100%  ;
+        font-size:20px;
+        color: whitesmoke;
+        position: relative;
+        left:15px;
+    }
+    .titulli{
+        display: inline-block; 
+        margin: 0;
+    }
+    .post .tekst{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        position: relative;
+        bottom: 20px;
+    }
+.post p{ 
+   font-size: 14px;
+   font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .post img{
+        border-radius: 30px;
+        width:90%;
+        height:30vh;
+  
+    }
+    .hr{
+        width: 90%;
+       
+    }
+  .Button{
+    width: 25%;
+    height: 5vh;
+    position: relative;
+    left: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 17px;
+    color: white;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius:20px;
+  }
+  .Button:hover{
+    background-color: white;
+    color: #003366;
+    border: 1px solid #003366;
+  }
+   
+  /*pjesa e headerit =====================================================*/
+ 
+  
+  .post3{
+    color: white;
+    width: 95%;
+    height:30vh ;
+   display: none;
+   flex-direction: row;
+    border: 1px solid #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+   overflow: hidden;
+
+    
+
+}
+.post3 .photo{
+    width: 30%;
+    height: auto;
+
+}
+.post3 h3{
+    width:100%  ;
+    font-size:30px;
+    color: whitesmoke;
+    position: relative;
+    left:15px;
+}
+
+.post3 .tekst{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+    bottom: 20px;
+}
+.post3 p{ 
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.post3 img{
+    border-radius: 30px;
+    width:90%;
+    height:30vh;
+
+}
+    
+ footer{
+  
+   text-align: center;
+ }
+ footer h4{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+ }
+
+/*u kall truni */
+.delete-btn {
+  background-color:  #3498db; /* Ngjyrë e kuqe për butonin */
+  color: black; /* Ngjyrë e bardhë për tekstin */
+  border: none; /* Pa kufij */
+  padding: 10px 20px; /* Kapsullim për butonin */
+  font-size: 16px; /* Madhësia e tekstit */
+  cursor: pointer; /* Cursor që tregon që është i klikueshëm */
+  border-radius: 5px; /* Kënde të rrumbullakosura */
+  transition: background-color 0.3s ease; /* Efekti i kalimit */
+}
+
+.delete-btn:hover {
+  background-color:yellow; /* Ngjyrë më e errët kur kalohet mbi të */
+}
+
+.delete-btn:focus {
+  outline: none; /* Heqja e kufirit të fokusit */
+}
+.add-news-section{
+  width:100%;
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: center;
+border-top: 1px solid white;
+}
+.add-news-form {
+width:80%;
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: center;
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+.add-news-form input, .add-news-form textarea ::placeholder{
+  color: white;
+opacity: 1;
+}
+.add-news-form input, .add-news-form textarea :-ms-input-placeholder{
+  color: white;
+}
+.add-news-form input, .add-news-form textarea {
+  padding: 5px;
+  margin: 8px 1%; 
+  border: 1px solid white;
+  border-radius: 15px;
+  outline: none;
+  color: #fff;
+ background-color: transparent; 
+  font-size: 16px;
+  resize: none;
+}
+input[type="file"] {
+display: none;
+
+} 
+input[type="text"] {
+width: 100px;
+border: 1px solid #fff;
+border-radius: 15px;
+color: white;
+outline: none;
+background-color: transparent;
+} 
+
+.add-news-form button {
+  background-color: red; 
+  color: white;
+  padding: 12px 20px;
+  border: 1px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  margin-top: 12px;
+  transition: background-color 0.3s;
+}
+
+h2{
+ font-size:2.0em;
+  color: white;
+}
+label{
+  margin-top:17px;
+  color: white;
+  font-size:1.3em;
+}
+.data {
+color:white;
+}
+.post h3{
+font-size:20px;
+}
+.post p{
+font-size: 14px;
+}
+
+.add-news-section .fotoimg{
+  width: 15%;
+  height: 30px;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid white;
+  display: inline-block; 
+  text-align: center; 
+  line-height: 20px; 
+  padding-top: 10px;
+ margin-bottom: 10px;
+ padding-left: 10px;
+ margin-right: 10px;
+  }
+
+
+
+
+ /*RESP0NSIV*/
+@media (max-width: 1200px) {
+  /*Pjesa e navbarit*/
+  .navbar {
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ 
+ .toggle-button {
+     display: flex;
+ }
+ 
+ .navbar-links {
+     display: none;
+     width: 100%;
+ }
+ 
+ .navbar-links ul {
+     width: 100%;
+     flex-direction: column;
+ }
+
+ 
+ .navbar-links ul li {
+     text-align: center;
+ }
+ 
+ .navbar-links ul li a {
+     padding: .5rem 1rem;
+ }
+ .navbar-links li a:hover {
+  text-decoration: underline;
+}
+ .navbar-links button  {
+  background-color: #000;
+  color: white;
+  border: solid white; 
+  position: relative;
+  top: 8px;
+}
+.navbar-links button:hover{
+  background-color: whitesmoke;
+}
+ 
+ .navbar-links.active {
+     display: flex;
+ }
+ /*  Pjesa    */
+ 
+ .post p{ 
+    font-size:15px ;
+ }
+ .post3 p{
+  font-size: 15px;
+ }
+ 
+ .Button{
+  border-radius: 40px;  
+  width: 350px;
+ }
+
+}
+ @media (max-width: 700px) {
+  .span  {
+
+   justify-content: space-between;
+  }
+  .span input{
+  margin-left: 45px;
+    width: 150px;
+    
+  }
+  .post{
+    display: flex;
+        flex-direction: column;  
+        justify-content: flex-start;  
+        align-items: center;  
+        height: auto; 
+  }
+  .post img{
+    position: relative;
+    right: 90px;
+    width: 350px;
+    height: 18vh;
+  }
+  .post h3{
+    margin-top: 30px;
+    font-size: 15px;
+    
+  }
+  .post p{
+   
+    font-size: 13px;
+
+  }
+  .post3{
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;  
+    align-items: center;  
+    height: auto; 
+  }
+  .post3 img{
+    position: relative;
+    right: 90px;
+    width: 350px;
+    height: 18vh;
+  }
+  .post3 h3{
+    margin-top: 25px;
+    font-size: 15px;
+    
+  }
+  .post3 p{
+   
+    font-size: 13px;
+ }
+ .Button{
+  border-radius: 40px;  
+  width: 150px ;
+ 
+ }
+}

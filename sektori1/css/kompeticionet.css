@@ -1,0 +1,530 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ 
+
+ .navbar {
+height: 60px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba( 0, 51, 102, 0.2 );
+    backdrop-filter: blur( 20.5px );
+  margin-bottom: 5px;
+    color: white;
+    
+  }
+  
+  .brand-title img {
+    margin-top: 10px;
+    margin-left:10px;
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
+
+  }
+  
+  
+ 
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .navbar-links{
+    margin-bottom: 10px;
+    align-items: center;
+}
+  .navbar-links li a:hover {
+    text-decoration: underline;
+  }
+  .navbar-links button{
+    background-color: white;
+   color: #000;
+   border: solid white; 
+   text-align: center;
+   border-radius: 10px;
+   width: 70px;
+   height: 25px;
+   outline: none;
+   margin-bottom: 20px;
+  }
+  .navbar-links button:hover {
+    text-decoration: underline;
+   cursor:  pointer;
+  }
+  
+  
+  .toggle-button {
+    margin-top: 20px;
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+ 
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .left-section .linkat a{
+    padding-right: 10px;
+    text-decoration: none;
+    }
+  .linkat .ka {
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 12px;
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    border: 2px solid  white;
+    background-color: #000;
+    margin-right: 9px;
+    color: white;
+}
+.linkat .sa{
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 12px;
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    border: 2px solid yellow;
+    background-color: yellow;
+    color: #1672ce;
+}
+
+.linkat .ka:hover{
+    background-color: yellow;
+    color: #000;
+    border: 2px solid yellow;
+}
+.linkat .sa:hover{
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+}
+  
+
+  
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    overflow: hidden;
+    margin-top: 50px;
+    color: white;
+}
+
+.content img {
+  border-radius: 10px;
+  width: 95%;
+  height: 120vh auto;
+}
+
+.content .right {
+  position: relative;
+  width: 50%;
+  height: 500px auto;
+
+}
+.content .left-section {
+  width: 50% ;
+  height: 500px auto;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.programet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+
+.programet h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.programet select {
+    margin-left: 20px; 
+    width: 200px;
+    height: 40px;
+    background-color: #000;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+.linkat{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.content1{
+    background-color: #000;
+    color: white;
+}
+ body
+ {
+    background-color: #000;
+ 
+ }
+ 
+
+
+ footer {
+  
+    width: 100%;
+    height: 150px;
+   
+ }
+ footer h4 {
+    text-align: center;
+    position: relative;
+    top: 15px;
+    font-size: 20px;
+    color: white;
+ margin-top: 20px;
+
+ }
+ select {
+    
+    width: 200px;
+    height: 40px;
+    background-color: #000;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    position: relative; 
+    z-index: 10; 
+}
+
+select:focus {
+    outline: none;
+    border-color: yellow;
+}
+
+select option {
+    background-color: #000;
+    color: white;
+    border: 1px solid #000;
+}
+/*u kall truni*/
+.shtimi{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.shtimi input{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.shtimi textarea{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    resize: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-left: 10px;
+}
+.shtimi input[type="submit"]{
+    width: 200px;
+    height:  40px;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.shtimi form{
+ margin-top: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.shtimi label{
+    width: 200px;
+    height: 40px;
+    margin-left: 30px;
+}
+.shtimi .file{
+    text-align: center;
+    padding-top: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+ background-color: red;
+ color: white;
+ cursor: pointer;
+}
+.shtimi input[type="file"]{
+    display: none;
+}
+
+@media (max-width: 600px) {
+  
+  .navbar {
+    height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none; 
+      flex-direction: column; 
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+      padding: 8px 0;
+  }
+
+  .navbar-links ul li a {
+      font-size: 14px;
+      padding: 0.5rem;
+  }
+
+  .navbar-links button {
+      background-color: #000;
+      color: white;
+      border: solid white;
+      margin-top: 8px;
+      width: 80px;
+      height: 40px;
+      font-size: 14px;
+      
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  
+  .content {
+      flex-direction: column; 
+      align-items: center;
+      margin-top: 20px;
+      padding: 20px;
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .content .right,
+  .content .left-section {
+      text-align: center;
+      padding: 10px;
+      width: 100%; 
+  }
+
+  .content p {
+      width: 90%;
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.5;
+  }
+
+ 
+  footer {
+      text-align: center;
+      padding: 10px;
+  }
+
+  footer h4 {
+      font-size: 14px;
+  }
+
+  
+  .linkat {
+      flex-direction: space;
+      align-items: center;
+  }
+
+
+
+ 
+}
+@media (max-width: 400px) {
+
+    .navbar {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+  
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+        display: none; 
+        flex-direction: column; 
+        width: 100%;
+    }
+  
+    .navbar-links ul {
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+        text-align: center;
+        padding: 8px 0;
+    }
+  
+    .navbar-links ul li a {
+        font-size: 12px; 
+        padding: 0.5rem;
+    }
+  
+    .navbar-links button {
+        background-color: #000;
+        color: white;
+        border: solid white;
+        margin-top: 8px;
+        width: 70px; 
+        height: 35px; 
+        font-size: 12px; 
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+  
+    .content {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 20px;
+        padding: 10px; 
+    }
+  
+    .content img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .content .right,
+    .content .left-section {
+        text-align: center;
+        padding: 5px; 
+        width: 100%; 
+    }
+  
+    .content p {
+        width: 90%;
+        margin: 5px 0;
+        font-size: 12px; 
+        line-height: 1.4; 
+    }
+  
+    footer {
+        text-align: center;
+        padding: 5px; 
+    }
+  
+    footer h4 {
+        font-size: 12px; 
+    }
+  
+    .linkat {
+        display: flex;
+        flex-direction: space;
+        align-items: center;
+        width: 90%; 
+        margin-bottom: 5px; 
+        font-size: 12px; 
+    
+    }
+  
+   
+  
+  }
