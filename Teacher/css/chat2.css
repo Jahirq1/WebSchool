@@ -1,0 +1,134 @@
+/* Sigurohuni që gjithë hapësira e chat-it të jetë një shtrirje e lartë, por formën ta mbani fiks poshtë */
+.chat-area {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px); /* Lartësia e chat-it, duke lënë vend për headerin dhe footerin */
+    overflow: hidden; /* Mos lejo që të bëhet scroll për chat-area si tërësi */
+}
+
+/* Chat-box është ajo ku shfaqen mesazhet, do bëhet scrollable */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-height: 80%; /* Maksimalisht zë 80% të hapësirës vertikale */
+    overflow-y: auto; /* Kjo mundëson scrolling për mesazhet */
+    flex-grow: 1; /* Përdor gjithë hapësirën mbetur */
+    border-right: 2px solid #ccc; /* Shtoni një vijë anash (vertikale) */
+}
+
+/* Pjesa ku shkruani mesazhin (forma) */
+.typing-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    bottom: 0; /* Forma do të qëndrojë gjithmonë në fund */
+    z-index: 10; /* Bëni që forma të qëndrojë mbi mesazhet */
+    width: 100%; /* Sigurohuni që forma zë gjithë gjerësinë e ekranit */
+    background-color: #fff; /* Për të siguruar që të ketë ngjyrën e duhur */
+}
+
+/* Mesazhet e dërguara nga profesori (të shfaqura në të djathtë) */
+/* Mesazhet e dërguara nga profesori (profesor shfaqet në të djathtë dhe ngjyrë e kuqe) */
+.chat.outgoing {
+    display: flex;
+    flex-direction: row-reverse; /* Vendos mesazhin në të djathtë */
+    align-items: center;
+    padding: 10px;
+    background-color: #e74c3c; /* Ngjyra e kuqe për mesazhin e dërguar */
+    color: white;  /* Teksti është i bardhë për kontrast */
+    border-radius: 10px;
+    margin-top: 10px; /* Shtoni distancë nga mesazhi tjetër */
+}
+
+/* Detajet e mesazhit të dërguar nga profesori */
+.chat.outgoing .details {
+    background-color: #e74c3c; /* Ngjyra e kuqe për mesazhin e dërguar */
+    color: white;  /* Teksti është i bardhë */
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%; /* Maksimumi i gjerësisë së mesazhit */
+    word-wrap: break-word; /* Bën që teksti të ndahet nëse është i gjatë */
+}
+
+/* Foto të ngarkuara për mesazhet e profesorit */
+.chat.outgoing .chat-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+/* Mesazhet e profesorëve */
+.chat.incoming {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat.incoming .details {
+    background-color: #0f31d9;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Foto të ngarkuara */
+.chat-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-field:focus {
+    border-color: #3498db;
+}
+
+.photo-input {
+    
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.send_btn {
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.send_btn img {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.send_btn:hover {
+    background-color: #2980b9;
+}
