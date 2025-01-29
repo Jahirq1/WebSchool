@@ -1,501 +1,501 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/*Pjesa e headerit*/
+.navbar {
+   display: flex;
+   position: relative;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgba( 0, 51, 102, 0.2 );
+   backdrop-filter: blur( 20.5px );
+ 
+   color: white;
+ }
+ 
+ .brand-title img {
+   margin-top: 10px;
+   margin-left:10px;
+   width: 50px;
+   height: 50px;
+   filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
+ }
+ 
+ .navbar-links {
+   height: 90%;
+   position: relative;
+   top: 10px;
+  
+ }
+
+ .navbar-links ul {
+   display: flex;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .navbar-links li {
+   list-style: none;
+ }
+ .navbar-links{
+   margin-bottom: 5px;
+   align-items: center;
+}
+ .navbar-links li a {
+   display: block;
+   text-decoration: none;
+   color: white;
+   padding: 1rem;
  }
  
  
- /*Pjesa e headerit*/
- .navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba( 0, 51, 102, 0.2 );
-    backdrop-filter: blur( 20.5px );
-  
-    color: white;
-  }
-  
-  .brand-title img {
-    margin-top: 10px;
-    margin-left:10px;
-    width: 50px;
-    height: 50px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
-  }
-  
-  .navbar-links {
-    height: 90%;
-    position: relative;
-    top: 10px;
+ .navbar-links li a:hover {
+   text-decoration: underline;
+ }
+ .navbar-links button{
+   background-color: #fff;
+   color: #000;
+   outline: none;
+   border: 1px solid #fff;
+   text-align: center;
+   width: 80px;
+   height: 25px;
+   border-radius: 10px;
+
+ }
+ .navbar-links button:hover{
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+ .toggle-button {
    
-  }
- 
-  .navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links li {
-    list-style: none;
-  }
-  .navbar-links{
-    margin-bottom: 5px;
-    align-items: center;
+   position: absolute;
+   top: .75rem;
+   right: 1rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
  }
-  .navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-  }
-  
-  
-  .navbar-links li a:hover {
-    text-decoration: underline;
-  }
-  .navbar-links button{
-    background-color: #fff;
-    color: #000;
-    outline: none;
-    border: 1px solid #fff;
-    text-align: center;
-    width: 80px;
-    height: 25px;
-    border-radius: 10px;
  
-  }
-  .navbar-links button:hover{
-    text-decoration: none;
-    cursor: pointer;
+ .toggle-button .bar {
+   height: 3px;
+   width: 100%;
+   background-color: white;
+   border-radius: 10px;
+ }
+ 
+ 
+body
+{
+   background-color: #000;
+}
+.News {
+   position: relative;
+  width: 100%;
+  height: 70vh auto;
+  display: block;
+}
+.News h2{
+  
+  color: whitesmoke;
+  text-align: center;
+  font-size: 4.0em;
+}
+.News p{
+  color: whitesmoke;
+  width: 100%;
+}
+.postmain{
+  display: flex;
+}
+.photo1 {
+ 
+display: block;
+
+}
+.photo1 img{
+  position: relative;
+  left:8% ;
+width: 90%;
+height: 55vh;
+border-radius: 20px;
+}
+.photo1 p{
+  display: block;
+  align-items: flex-start;
+margin-left: 8%;  
+width: 90%;
+font-size: 1.1em;
+}
+footer {
+   width: 100%;
+   height: 8vh;
+}
+footer h4 {
+   text-align: center;
+   position: relative;
+   top: 15px;
+   font-size: 20px;
+   color: white;
+
+}
+
+.slider {
+   width: 100%;
+   height: 70vh auto;
+   position: relative;
+   padding: 20px;
+   background-color: #000;
+}
+.titulli{
+   display: inline-block; 
+   margin: 0;
+  position: relative;
+  left: 48%;
+}
+.hr1{
+   width: 100%;
+   height: 2px; 
+   border: none;
+   background-color: whitesmoke; 
+   margin: 5px auto 0; 
+   
+}
+.Headline {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 2.8em;
+   color: whitesmoke;
+}
+
+/* Slider Container */
+.slider-container {
+   display: flex;
+   overflow-x: hidden;
+   scroll-behavior: smooth; 
+   gap: 20px; 
+   padding: 10px 0; 
+}
+
+
+.post-card {
+   flex: 0 0 350px; 
+   background: #fff;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   text-align: center;
+   padding: 10px;
+   margin-left: 30px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumb {
+   width:100%;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
+
+
+/*  Butonat e sliderit */
+.button {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: rgba(255, 255, 255, 0.8); 
+   border: none;
+   cursor: pointer;
+   z-index: 10; 
+   padding: 10px;
+   border-radius: 50%; 
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button img {
+   width: 26px; 
+   height: auto;
+}
+
+.pre-btn {
+   left: 10px; 
+}
+
+.nxt-btn {
+   right: 10px;
+}
+
+
+
+button:disabled {
+   background: rgba(200, 200, 200, 0.8);
+   cursor: not-allowed;
+}
+/*u kall truni vallah*/
+.delete-btn {
+   background-color:  #3498db;
+   color: black;
+   border: none; 
+   padding: 10px 20px; 
+   font-size: 16px;
+   cursor: pointer; 
+   border-radius: 5px;
+   transition: background-color 0.3s ease; 
+   margin-left: 50%;
+}
+
+.delete-btn:hover {
+   background-color:yellow;
+}
+
+.delete-btn:focus {
+   outline: none; 
+}
+.add-news-form {
+   width:100%;
+   display: flex;
+   flex-wrap: wrap;
+  
+  justify-content: space-between;
+}
+.add-news-section{
+   border-bottom: 1px solid white;
+   border-top: 1px solid white;
+}
+.add-head-news-section{
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
+}
+.add-head-news-form{
+ width:100%;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+justify-content: space-between;
+}
+
+.add-news-form input, .add-news-form textarea {
+   outline: none;
+   background-color: transparent;
+   padding: 5px;
+   margin: 35px; /* Hapsira midis inputeve */
+   border: 1px solid white;
+   border-radius: 5px;
+   font-size: 16px;
+   color: white;
+   resize: none;
+}
+.add-news-form input, .add-news-form textarea::placeholder {
+color: white;
+}
+.add-head-news-form input, .add-head-news-form textarea::placeholder {
+color: white;
+}
+.add-head-news-form input, .add-head-news-form textarea {
+outline: none;
+background-color: transparent;
+padding: 5px;
+margin: 8px 1%; /* Hapsira midis inputeve */
+border: 1px solid white;
+color: white;
+border-radius: 5px;
+font-size: 16px;
+resize: none;
+}
+
+.fotoimg {
+   width: 15%;
+   height: auto;
+   background-color: red;
+   cursor: pointer;
+   border-radius: 20px;
+   outline: none;
+   border: 1px solid white;
+   display: inline-block; 
+   text-align: center; 
+   padding: 10px;
+   word-wrap: break-word; /* Lejon thyerjen e fjalëve nëse janë shumë të gjata */
+   margin-bottom: 40px;
+}
+input[type="file"] {
+display: none;
+} 
+.add-news-form button {
+   background-color: red; 
+   color: white;
+   padding: 8px 10px;
+   border: 1px solid white;
+   
+   outline: none;
+   border-radius: 15px;
+   cursor: pointer;
+   font-size: 16px;
+   height: 50px;
+   margin-top: 40px;
+   transition: background-color 0.3s;
+   margin-right:5%
+}
+.add-news-form button:hover {
+   background-color:#000;
+}
+.add-head-news-form button:hover {
+   background-color:#000;
+}
+.add-head-news-form button {
+   background-color: red; 
+   color: white;
+   padding: 12px 10px;
+   border: 1px solid white;
+   outline: none;
+   border-radius: 15px;
+   cursor: pointer;
+   font-size: 16px;
+   
+   transition: background-color 0.3s;
+   margin-right: 20px;
+}
+
+
+h2{
+  font-size:2.0em;
+   color: white;
+}
+label{
+   margin-top:47px;
+   color: white;
+   font-size:1.3em;
+}
+.add-head-news-form  label{
+   margin-top:17px;
+   color: white;
+   font-size:15px;
+}
+
+.photo1 img{
+ position: relative;
+left:8% ;
+width: 90%;
+margin-right:50px;
+height:90vh;
+border-radius: 20px;
+}
+
+
+/*RESP0NSIV*/
+@media (max-width: 1200px) {
+   /*Pjesa e navbarit*/
+   .navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
   
   .toggle-button {
-    
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+      display: flex;
   }
   
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
+  .navbar-links {
+      display: none;
+      width: 100%;
   }
   
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
   
- body
- {
-    background-color: #000;
+  .navbar-links ul li {
+      text-align: center;
+  }
+  
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+  .navbar-links li a:hover {
+   text-decoration: underline;
  }
- .News {
-    position: relative;
-   width: 100%;
-   height: 70vh auto;
-   display: block;
- }
- .News h2{
+  .navbar-links button  {
+   background-color: #000;
+   color: white;
+   border: solid white; 
+   position: relative;
+   top: 8px;
+}
+.navbar-links button:hover{
+   background-color: whitesmoke;
+}
+  
+  .navbar-links.active {
+      display: flex;
+  }
+    /*pjes te postit me te ri*/
+.photo1 img{
+   height: 650px;
+}
+.postmain p{
+   font-size: 12px  ;
+  
+
+}.News h2{
    
    color: whitesmoke;
    text-align: center;
-   font-size: 4.0em;
- }
- .News p{
-   color: whitesmoke;
-   width: 100%;
- }
- .postmain{
+   font-size: 2.5em;
+}
+/*slideri i lajmeve*/
+.slider-container {
+
+   overflow-x: scroll;
+   scroll-behavior: smooth;
    display: flex;
- }
- .photo1 {
-  
- display: block;
- 
- }
- .photo1 img{
-   position: relative;
-   left:8% ;
- width: 90%;
- height: 55vh;
- border-radius: 20px;
- }
- .photo1 p{
-   display: block;
-   align-items: flex-start;
- margin-left: 8%;  
- width: 90%;
- font-size: 1.1em;
- }
- footer {
-    width: 100%;
-    height: 8vh;
- }
- footer h4 {
-    text-align: center;
-    position: relative;
-    top: 15px;
-    font-size: 20px;
-    color: white;
- 
- }
- 
- .slider {
-    width: 100%;
-    height: 70vh auto;
-    position: relative;
-    padding: 20px;
-    background-color: #000;
- }
- .titulli{
-    display: inline-block; 
-    margin: 0;
-   position: relative;
-   left: 48%;
- }
- .hr1{
-    width: 100%;
-    height: 2px; 
-    border: none;
-    background-color: whitesmoke; 
-    margin: 5px auto 0; 
-    
- }
- .Headline {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.8em;
-    color: whitesmoke;
- }
- 
- /* Slider Container */
- .slider-container {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth; 
-    gap: 20px; 
-    padding: 10px 0; 
- }
- 
- 
- .post-card {
-    flex: 0 0 350px; 
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
-    margin-left: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
- 
- .product-thumb {
-    width:100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
- }
- 
- 
- /*  Butonat e sliderit */
- .button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8); 
-    border: none;
-    cursor: pointer;
-    z-index: 10; 
-    padding: 10px;
-    border-radius: 50%; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
- }
- 
- button img {
-    width: 26px; 
-    height: auto;
- }
- 
- .pre-btn {
-    left: 10px; 
- }
- 
- .nxt-btn {
-    right: 10px;
- }
- 
- 
- 
- button:disabled {
-    background: rgba(200, 200, 200, 0.8);
-    cursor: not-allowed;
- }
- /*u kall truni vallah*/
- .delete-btn {
-    background-color:  #3498db;
-    color: black;
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px;
-    cursor: pointer; 
-    border-radius: 5px;
-    transition: background-color 0.3s ease; 
-    margin-left: 50%;
- }
- 
- .delete-btn:hover {
-    background-color:yellow;
- }
- 
- .delete-btn:focus {
-    outline: none; 
- }
- .add-news-form {
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-   
-   justify-content: space-between;
- }
- .add-news-section{
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
- }
- .add-head-news-section{
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
- }
- .add-head-news-form{
-  width:100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
- justify-content: space-between;
- }
- 
- .add-news-form input, .add-news-form textarea {
-    outline: none;
-    background-color: transparent;
-    padding: 5px;
-    margin: 35px; /* Hapsira midis inputeve */
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 16px;
-    color: white;
-    resize: none;
- }
- .add-news-form input, .add-news-form textarea::placeholder {
- color: white;
- }
- .add-head-news-form input, .add-head-news-form textarea::placeholder {
- color: white;
- }
- .add-head-news-form input, .add-head-news-form textarea {
- outline: none;
- background-color: transparent;
- padding: 5px;
- margin: 8px 1%; /* Hapsira midis inputeve */
- border: 1px solid white;
- color: white;
- border-radius: 5px;
- font-size: 16px;
- resize: none;
- }
- 
- .fotoimg {
-    width: 15%;
-    height: auto;
-    background-color: red;
-    cursor: pointer;
-    border-radius: 20px;
-    outline: none;
-    border: 1px solid white;
-    display: inline-block; 
-    text-align: center; 
-    padding: 10px;
-    word-wrap: break-word; /* Lejon thyerjen e fjalëve nëse janë shumë të gjata */
-    margin-bottom: 40px;
- }
- input[type="file"] {
- display: none;
- } 
- .add-news-form button {
-    background-color: red; 
-    color: white;
-    padding: 8px 10px;
-    border: 1px solid white;
-    
-    outline: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    height: 50px;
-    margin-top: 40px;
-    transition: background-color 0.3s;
-    margin-right:5%
- }
- .add-news-form button:hover {
-    background-color:#000;
- }
- .add-head-news-form button:hover {
-    background-color:#000;
- }
- .add-head-news-form button {
-    background-color: red; 
-    color: white;
-    padding: 12px 10px;
-    border: 1px solid white;
-    outline: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    
-    transition: background-color 0.3s;
-    margin-right: 20px;
- }
- 
- 
- h2{
-   font-size:2.0em;
-    color: white;
- }
- label{
-    margin-top:47px;
-    color: white;
-    font-size:1.3em;
- }
- .add-head-news-form  label{
-    margin-top:17px;
-    color: white;
-    font-size:15px;
- }
- 
- .photo1 img{
-  position: relative;
- left:8% ;
- width: 90%;
- margin-right:50px;
- height:90vh;
- border-radius: 20px;
- }
- 
- 
- /*RESP0NSIV*/
- @media (max-width: 1200px) {
-    /*Pjesa e navbarit*/
-    .navbar {
-       flex-direction: column;
-       align-items: flex-start;
-   }
-   
-   .toggle-button {
-       display: flex;
-   }
-   
-   .navbar-links {
-       display: none;
-       width: 100%;
-   }
-   
-   .navbar-links ul {
-       width: 100%;
-       flex-direction: column;
-   }
- 
-   
-   .navbar-links ul li {
-       text-align: center;
-   }
-   
-   .navbar-links ul li a {
-       padding: .5rem 1rem;
-   }
-   .navbar-links li a:hover {
-    text-decoration: underline;
-  }
-   .navbar-links button  {
-    background-color: #000;
-    color: white;
-    border: solid white; 
-    position: relative;
-    top: 8px;
- }
- .navbar-links button:hover{
-    background-color: whitesmoke;
- }
-   
-   .navbar-links.active {
-       display: flex;
-   }
+   flex-direction: row;
+   gap: 15px;
+   padding: 15px 0;
+}
+.slider-container::-webkit-scrollbar{
+   height: 6px;
+}
+}
+@media (max-width: 600px) {
      /*pjes te postit me te ri*/
- .photo1 img{
-    height: 650px;
- }
- .postmain p{
-    font-size: 12px  ;
-   
- 
- }.News h2{
-    
-    color: whitesmoke;
-    text-align: center;
-    font-size: 2.5em;
- }
- /*slideri i lajmeve*/
- .slider-container {
- 
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding: 15px 0;
- }
- .slider-container::-webkit-scrollbar{
-    height: 6px;
- }
- }
- @media (max-width: 600px) {
-      /*pjes te postit me te ri*/
-    .postmain {
-          font-size: 5px ;
-         gap:15px;
-         
-         flex-direction: column;/*nderrim i display per telfon*/
-       
-    }
-    .postmain p{
-     margin-left:15px;
-    }
-    .photo1 img{
-   
-     position: relative;
-     left: 15px;
-     height: 30vh;
-    border-radius: 20px;
-    }
-    .News h2{
-    
-       color: whitesmoke;
-       text-align: center;
-       font-size: 2.0em;
-    }/*slideri i lajmeve */
-    .slider-container {
- 
-       overflow-x: scroll;
-       scroll-behavior: smooth;
-       display: flex;
-       flex-direction: row;
-       gap: 15px;
-       padding: 15px 0;
-   }.post-card {
-    flex: 0 0 300px;
+   .postmain {
+         font-size: 5px ;
+        gap:15px;
+        
+        flex-direction: column;/*nderrim i display per telfon*/
+      
    }
- 
- }
+   .postmain p{
+    margin-left:15px;
+   }
+   .photo1 img{
+  
+    position: relative;
+    left: 15px;
+    height: 30vh;
+   border-radius: 20px;
+   }
+   .News h2{
+   
+      color: whitesmoke;
+      text-align: center;
+      font-size: 2.0em;
+   }/*slideri i lajmeve */
+   .slider-container {
+
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      padding: 15px 0;
+  }.post-card {
+   flex: 0 0 300px;
+  }
+
+}

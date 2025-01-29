@@ -18,12 +18,12 @@
         </a>
         <div class="navbar-links">
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Lajmet.html">Lajmet</a></li>
-            <li><a href="programet.html">Programet</a></li>
-            <li><a href="Eventet.html">Eventet</a></li>
-            <li><a href="Kompeticionet.html">Kompeticionet</a></li>
-            <li><a href="login.html"><button>log in</button></a></li>
+          <li><a href="home.php">Home</a></li>
+                <li><a href="Lajmet.php">Lajmet</a></li>
+                <li><a href="programet.php">Programet</a></li>
+                <li><a href="Eventet.php">Eventet</a></li>
+                <li><a href="Kompeticionet.php">Kompeticionet</a></li>
+                <li><a href="?logout=true"><button>Log out</button></a></li>
         </ul>
         </div>
       </nav>
