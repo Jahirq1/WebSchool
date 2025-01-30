@@ -1,150 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+include('../Crud/db.php');  
+include('../Crud/home.php');
 
+
+if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+
+    
+    if (News::addNews($db, $_FILES['image'], $title, $content)) {
+        echo "<script>
+                alert('Lajmi ne slider home është shtuar me sukses!');
+                window.location.href = 'home.php';
+              </script>";
+    } else {
+        echo "Ka ndodhur një gabim gjatë shtimit të lajmit ne sliderin e home.";
+    }
+} 
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $id = $_POST['id'];
+
+    if (News::deleteNews($db, $id)) {
+        echo "<script>
+                alert('Lajmi nga slideri i home u fshi me sukses!');
+                window.location.href = 'home.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Gabim gjatë fshirjes së lajmit nga slideri i home.');
+                window.history.back();
+              </script>";
+    }
+}
+
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit();
+}
+if (isset($_GET['logout'])) {
+    
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+?>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="shortcut icon" type="x-icon" href="../img/ubt.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gjimnazi-UBT</title>
+
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"><img src="../img/ubt-logo-img1.png" alt=""></div>
+        <div class="brand-title"><img src="../img/administrator.png" alt=""></div>
         <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </a>
         <div class="navbar-links">
-          <ul>
-          <li><a href="home.php">Home</a></li>
+            <ul>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="Lajmet.php">Lajmet</a></li>
                 <li><a href="programet.php">Programet</a></li>
                 <li><a href="Eventet.php">Eventet</a></li>
                 <li><a href="Kompeticionet.php">Kompeticionet</a></li>
                 <li><a href="?logout=true"><button>Log out</button></a></li>
-        </ul>
+            </ul>
         </div>
-      </nav>
-    <section class="slider-container">
-        <div class="teksti">
-            <h1 class="h1">MIRE SE VINI NE UBT</h1>
-            <input type="search" id="searchInput" placeholder="search">
-        </div>
-        <div class="slider">
-            <div class="slide">
-                <img src="../img/back/f1.jpg" alt="Image 1">
-            </div>
-            <div class="slide">
-                <img src="../img/back/f2.jpg" alt="Image 2">
-            </div>
-            <div class="slide">
-                <img src="../img/back/f3.jpg" alt="Image 3">
-            </div>
-        </div>
+    </nav>
+
+    <section class="add-news-home-section">
+        <h2>Shto një Lajm të Ri ne slider</h2>
+        <form action="home.php" method="POST" class="add-news-home-form" enctype="multipart/form-data">
+            <label for="image1" id="label">Zgjidhni një Foto:</label>
+            <input type="file" id="image1" name="image" required>
+
+            <label for="title" id="title1">Titulli:</label>
+            <input type="text" id="title" name="title" placeholder="Titulli i lajmit..." required>
+
+            <label for="content" id="permbajtja">Përmbajtja:</label>
+            <textarea id="content" name="content" placeholder="Shkruani përmbajtjen e lajmit..." required></textarea>
+
+            <button type="submit">Shto Lajmin</button>
+        </form>
+
     </section>
-
-    <!--- nen faqja -->
-    <section class="sub">
-        <div class="right">
-            <div class="t">
-            <h1>Pse <em>duhet te</em><br>zgjedhesh UBT ? </h1></div>
-            <div class="t1">
-        <p>qe nga 2004 UBT lider ne arsim te ulet dhe te lart</p></div class="t2">
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScbNxBMbMkigRvtDTy-NjXeU1O5_Zc3teOwsfuGVsilmgT3gQ/viewform?usp=sf_link"> <button>Apliko tani</button></a>
-        </div>
-</div>
-        <div class="left">
-        <img src="../img/ubtpost1.png" alt="">
-        </div>
-    </section>
-
-    <!--- promotion sektori-->
-
-    <section class="promotion">
-        <h2 class="h1">American Europian school</h2>
-        <img src="../img/ubtpost2.png" alt="">
-        <h2 class="h3">Recognized For Excellence 5 Star</h2>
-    </section>
-
     <!--- Sektori Lajmet -->
     <section class="lajmet">
         <h1>Lajmet</h1>
         <section class="slideri-1">
             <button class="button next" onclick="leviz(1)">&#10095;</button>
             <button class="button prev" onclick="leviz(-1)">&#10094;</button>
+
             <div class="slid">
-                <div class="post">
-                    <img src="../img/post-lajmet/post.jpg" alt="Post 1">
-                    <h3>Misioni thelbsor i UBT-së</h3>
-                    <p>Në Shkollën UBT, ne jemi të përkushtuar t’i pajisim nxënësit tanë me një arsimim të shquar
-                        cilësor, profesional dhe praktik, i cili është i lidhur me nevojat e tregut të punës dhe trendet
-                        globale në edukim, biznes dhe teknologji.</p>
-                </div>
-                <div class="post">
-                    <img src="../img/post-lajmet/post1.png" alt="Post 1">
-                    <h3>Gjimnazi UBT-së pjese e Erasmus+</h3>
-                    <p>Gjatë një jave, nxënësit e UBT-së patën mundësinë të përjetonin një eksperiencë të pasur dhe
-                        shumëdimensionale në Helsinki dhe Karjalohja. Nën kujdesin e stafit të YSP Balkan dhe
-                        Drejtoreshës Ekzekutive, Prof. Ejona Icka, e cila gjithashtu është pedagoge në UBT, të rinjtë u
-                        angazhuan në leksione, aktivitete sportive, lojëra dhe vizita kulturore.</p>
-                </div>
-                <div class="post">
-                    <img src="../img/post-lajmet/post2.jpg" alt="Post 1">
-                    <h3>Shkolla e Mjekësisë dhe Gjimnazi UBT</h3>
-                    <p>Vendi ideal i mësimit, kurrikula e bazuar në modele evropiane dhe amerikane, koncepti i mësimit
-                        CLASSROOM 3.0 i bazuar tërësisht në STEM (Shkencë, Teknologji, Inxhinieri dhe Matematikë), si
-                        dhe ambienti super atraktiv e bëjnë shkollimin e mesëm të lartë në UBT, unik dhe të suksesshëm
-                        për përgatitjen drejt studimeve akademike.</p>
-                </div>
-                <div class="post">
-                    <img src="../img/post-lajmet/post3.jpg" alt="Post 1">
-                    <h3>Java e Pikturave ne UBT</h3>
-                    <p>Nxënësit e Shkollës së Mesme Profesionale dhe Gjimnazit UBT, kanë sfiduar vetën e tyre në
-                        pikturë, duke ndërlidhur muzikën si një mjet për të krijuar përmes tingujve me symbyllur një
-                        pikturë unike.</p>
-                </div>
-                <div class="post">
-                    <img src="../img/post-lajmet/post5.jpg" alt="Post 1">
+                <?php
+                $news = News::getAllNews($db);
 
-                    <h3>Një koncept i ri bazuar në teknologjitë </h3>
-                    <p>Gjatë 20 viteve rrugëtim e zhvillim, tani po ofrojmë konceptin e ri të ekosistemit të bazuar në
-                        inovacion..</p>
-                </div>
-                <div class="post">
-                    <img src="../img/post-lajmet/post4.jpg" alt="Post 1">
-                    <h3>Partner ne rrugtimin tuaj</h3>
-                    <p>Një rrugëtim i ri ka nisur për nxënësit e shkollave të mesme në UBT që një hap shumë të
-                        rëndësishëm të jetës së tyre ia besuan UBT-së, në hapjen zyrtare të Gjimnazit UBT dhe Shkollës
-                        së Mesme të Mjekësisë.</p>
-                </div>
+                if (empty($news)) {
+                    echo "<p>Aktualisht nuk ka lajme për të shfaqur.</p>";
+                } else {
+                    foreach ($news as $rowSlider) {
+                        echo '<div class="post">';
+                        $imagePath = "../uploads/" . htmlspecialchars($rowSlider['image_url']);
+                        echo '<img src="' . $imagePath . '" alt="' . htmlspecialchars($rowSlider['title']) . '">';
+                        echo '<h3>' . htmlspecialchars($rowSlider['title']) . '</h3>';
+                        echo '<p>' . htmlspecialchars($rowSlider['content']) . '</p>';
+
+                       
+                        echo '<form action="home.php" method="POST" onsubmit="return confirm(\'A jeni i sigurt që dëshironi të fshini këtë lajm te sliderit home?\');">';
+                        echo '<input type="hidden" name="id" value="' . $rowSlider['id'] . '">';
+                        echo '<button type="submit" class="delete-btn">Fshi</button>';
+                        echo '</form>';
+                        echo '</div>';
+                    }
+                }
+                ?>
             </div>
-
         </section>
     </section>
+
     <!-- contact form -->
     <hr>
     <section class="contact">
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" border-radius="20px" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        <div class="h1">
+            <h1>Kontaktet e pranuara</h1>
         </div>
-        <div class="form">
-            <div class="adresa">
-                <h3>nr kontaktit :022-4332-32221</h3>
-                <h3>Lokacioni : kalabri rruga tret</h3>
-            </div>
-            <h1>Na Kontaktoni</h1>
-            <form action="" method="post" id="kontakti">
-                <input type="text" name="emri" placeholder="emrin dhe mbiemri" required >
-                <br>
-                <input type="email" name="email" placeholder="email" required>
-                <br>
-                <textarea name="mesazhi" id="" placeholder="shenoni kerkesen tuaj" required></textarea>
-                 <br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Emri</th>
+                    <th>Email</th>
+                    <th>Mesazhi</th>
+                    <th>Koha e kontaktit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+          
+                $sql = "SELECT emri, email, mesazhi, data_regjistrimi FROM contacts ORDER BY data_regjistrimi DESC";
+                $result = $db->query($sql);
+
+                
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['emri']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['mesazhi']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['data_regjistrimi']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>Nuk ka mesazhe të regjistruara.</td></tr>";
+                }
+
+              
+                $db->close();
+                ?>
+            </tbody>
+        </table>
+
     </section>
 
     <!--- footeri-->
@@ -156,12 +181,12 @@
 
     <!---- javascript  -->
     <script>
-    const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
 
 
         let a = 0;
