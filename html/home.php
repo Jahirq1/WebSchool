@@ -1,0 +1,203 @@
+<?php
+include ( 'conn/db.php'); 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $emri = $_POST['emri'];
+    $email = $_POST['email'];
+    $mesazhi = $_POST['mesazhi'];
+
+    if (!empty($emri) && !empty($email) && !empty($mesazhi)) {
+        $sql = "INSERT INTO contacts (emri, email, mesazhi) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $emri, $email, $mesazhi); 
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Mesazhi është dërguar me sukses!');</script>";
+        } else {
+            echo "<script>alert('Ka ndodhur një gabim, ju lutem provoni përsëri.');</script>";
+        }
+
+        $stmt->close();
+    } else {
+        echo "<script>alert('Ju lutemi plotësoni të gjitha fushat!');</script>";
+    }
+}
+
+$conn->close();
+?>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../img/ubt-logo-img1.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjimnazi-UBT</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><img src="../img/ubt-logo-img1.png" alt=""></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="Lajmet.php">Lajmet</a></li>
+            <li><a href="programet.php">Programet</a></li>
+            <li><a href="Eventet.php">Eventet</a></li>
+            <li><a href="Kompeticionet.php">Kompeticionet</a></li>
+            <li><a href="login.php"><button>log in</button></a></li>
+        </ul>
+        </div>
+      </nav>
+    <section class="slider-container">
+        <div class="teksti">
+            <h1 class="h1">MIRE SE VINI NE UBT</h1>
+            <input type="search" id="searchInput" placeholder="search">
+        </div>
+        <div class="slider">
+            <div class="slide">
+                <img src="../img/back/f1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="../img/back/f2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="../img/back/f3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!--- nen faqja -->
+    <section class="sub">
+        <div class="right">
+            <div class="t">
+            <h1>Pse <em>duhet te</em><br>zgjedhesh UBT ? </h1></div>
+            <div class="t1">
+        <p>qe nga 2004 UBT lider ne arsim te ulet dhe te lart</p></div class="t2">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScbNxBMbMkigRvtDTy-NjXeU1O5_Zc3teOwsfuGVsilmgT3gQ/viewform?usp=sf_link"> <button>Apliko tani</button></a>
+        </div>
+</div>
+        <div class="left">
+        <img src="../img/ubtpost1.png" alt="">
+        </div>
+    </section>
+
+    <!--- promotion sektori-->
+
+    <section class="promotion">
+        <h2 class="h1">American Europian school</h2>
+        <img src="../img/ubtpost2.png" alt="">
+        <h2 class="h3">Recognized For Excellence 5 Star</h2>
+    </section>
+
+    <!--- Sektori Lajmet -->
+    <section class="lajmet">
+        <h1>Lajmet</h1>
+        <section class="slideri-1">
+            <button class="button next" onclick="leviz(1)">&#10095;</button>
+            <button class="button prev" onclick="leviz(-1)">&#10094;</button>
+            <div class="slid">
+            <?php
+            include ( 'conn/db.php'); 
+             $sqlSlider = "SELECT * FROM homeSlider ORDER BY id DESC"; 
+             $resultSlider = $conn->query($sqlSlider);
+
+             if ($resultSlider->num_rows > 0) {
+                 while ($rowSlider = $resultSlider->fetch_assoc()) {
+                     echo '<div class="post">';
+
+
+                     $imagePath = "../sektor1/uploads/" . htmlspecialchars($rowSlider['image_url']); 
+                     echo '<img src="' . $imagePath . '" alt="' . htmlspecialchars($rowSlider['title']) . '">';
+                     echo '<h3>' . htmlspecialchars($rowSlider['title']) . '</h3>';
+                     echo '<p>' . htmlspecialchars($rowSlider['content']) . '</p>';
+                     echo '</div>';
+                 }
+             } else {
+                 echo "<p>Slider është bosh për momentin.</p>";
+             }
+            ?>
+            </div>
+
+        </section>
+    </section>
+    <!-- contact form -->
+    <hr>
+    <section class="contact">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" border-radius="20px" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+        <div class="form">
+            <div class="adresa">
+                <h3>nr kontaktit :022-4332-32221</h3>
+                <h3>Lokacioni : kalabri rruga tret</h3>
+            </div>
+            <h1>Na Kontaktoni</h1>
+            <form action="" method="post" id="kontakti">
+                <input type="text" name="emri" placeholder="emrin dhe mbiemri" required >
+                <br>
+                <input type="email" name="email" placeholder="email" required>
+                <br>
+                <textarea name="mesazhi" id="" placeholder="shenoni kerkesen tuaj" required></textarea>
+                 <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!--- footeri-->
+
+    <footer>
+        <hr color="white">
+        <h4>copyrights &#169 all rights reserved from UBT</h4>
+    </footer>
+
+    <!---- javascript  -->
+    <script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+
+        let a = 0;
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        console.log('.slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+
+            currentIndex = (currentIndex + 1) % totalSlides;
+            document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+
+        setInterval(nextSlide, 5000);
+
+        function leviz(drejtimi) {
+            const b = document.querySelector(".slid");
+            const c = document.querySelectorAll(".post");
+            const totali = c.length;
+            a += drejtimi;
+            if (a < 0) {
+                a = totali - 3;
+            }
+            else if (a > totali - 3) {
+                a = 0;
+            }
+            b.style.transform = `translateX(-${a * 20.33}%)`;
+        }
+
+
+    </script>
+</body>
+
+</html>
