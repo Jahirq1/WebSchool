@@ -77,23 +77,24 @@ if (isset($_GET['logout'])) {
             </ul>
         </div>
     </nav>
-
-    <section class="add-news-home-section">
+   <hr>
+    <div class="shtimi">
         <h2>Shto një Lajm të Ri ne slider</h2>
-        <form action="home.php" method="POST" class="add-news-home-form" enctype="multipart/form-data">
-            <label for="image1" id="label">Zgjidhni një Foto:</label>
-            <input type="file" id="image1" name="image" required>
-
+        <form action="home.php" method="POST"  enctype="multipart/form-data">
+        
             <label for="title" id="title1">Titulli:</label>
             <input type="text" id="title" name="title" placeholder="Titulli i lajmit..." required>
 
             <label for="content" id="permbajtja">Përmbajtja:</label>
             <textarea id="content" name="content" placeholder="Shkruani përmbajtjen e lajmit..." required></textarea>
-
-            <button type="submit">Shto Lajmin</button>
+            
+            <label for="image1" id="label" class="file">Zgjidhni një Foto:</label>
+            <input type="file" id="image1" name="image" required>
+            <input type="submit" value="Dërgo">
         </form>
 
-    </section>
+        </div>
+    
     <!--- Sektori Lajmet -->
     <section class="lajmet">
         <h1>Lajmet</h1>

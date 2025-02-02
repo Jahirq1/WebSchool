@@ -93,21 +93,22 @@ if (isset($_POST['delete_head_news'])) {
 <main>
  
 
-<section class="add-head-news-section">
+<div class="shtimi">
     <h2>Shto Një Lajm Kryesor</h2>
-    <form action="Lajmet.php" method="POST" class="add-head-news-form" enctype="multipart/form-data">
-        <label for="head-image" class="fotoimg">Zgjidhni një Foto Kryesore:</label>
-        <input type="file" id="head-image" name="head_image" required>
-        
+    <form action="Lajmet.php" method="POST"  enctype="multipart/form-data">
+
         <label for="head-title">Titulli Kryesor:</label>
         <input type="text" id="head-title" name="head_title" placeholder="Titulli kryesor i lajmit..." required>
         
         <label for="head-content">Përmbajtja Kryesore:</label>
         <textarea id="head-content" name="head_content" placeholder="Shkruani përmbajtjen kryesore të lajmit..." required></textarea>
         
-        <button type="submit">Shto Lajmin Kryesor</button>
+        <label for="head-image" class="file">Zgjidhni një Foto :</label>
+        <input type="file" id="head-image" name="head_image" required>
+        <input type="submit" value="Shto lajmin kryesor:">
     </form>
-</section>
+    </div>
+
 
 <?php
 
@@ -133,22 +134,27 @@ foreach ($headNews as $row) {
 
 
 <!---Pjesa  e formes se shtimit te lajmeve tek slideri -->
-<section class="add-news-section">
-    <h2>Shto një Lajm të Ri</h2>
-    <form action="Lajmet.php" method="POST" class="add-news-form" enctype="multipart/form-data">
-    <label for="image" class="fotoimg">Zgjidhni një Foto:</label>
-    <input type="file" id="image" name="image" required>
+<div class="shtimi">
+    <h2>Shto një Lajm të Ri ne slider </h2>
+    <form action="Lajmet.php" method="POST" enctype="multipart/form-data">
     
     <label for="title">Titulli:</label>
     <input type="text" id="title" name="title" placeholder="Titulli i lajmit..." required>
     
     <label for="content">Përmbajtja:</label>
     <textarea id="content" name="content" placeholder="Shkruani përmbajtjen e lajmit..." required></textarea>
-    
-    <button type="submit">Shto Lajmin</button>
+   
+    <label for="image" class="file">Zgjidhni një Imazh:</label>
+    <input type="file" id="image" name="image" required>
+    <input type="submit" value="Shto lajmin">
 </form>
 
-</section>
+</div>
+
+
+
+
+
 <!---Pjesa  e sliderit te lajmeve -->
 <section class="slider">
     <div class="titulli">

@@ -143,10 +143,10 @@ if (isset($_GET['logout'])) {
         <h2>Forma për Futjen e Kompeticioneve</h2>
         <form action="Kompeticionet.php" method="post" enctype="multipart/form-data">
             <label for="name">Emri i Kompeticionit:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" name="name" placeholder="Shkruani Emrin " required><br><br>
 
             <label for="description">Përshkrimi:</label><br>
-            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+            <textarea id="description" name="description" placeholder="ShkruaniShkruani permbajtjen e kompeticionit" rows="4" cols="50"></textarea><br><br>
 
             <label for="image" class="file">Zgjidhni një Imazh:</label>
             <input type="file" id="image" name="image"><br><br>

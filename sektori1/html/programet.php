@@ -143,10 +143,10 @@ if (isset($_GET['logout'])) {
             <h2>Shtimi i Programeve </h2>
             <form action="programet.php" method="post" enctype="multipart/form-data">
                 <label for="name">Emri i programit:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Emri i programit..." required>
 
                 <label for="description">Përshkrimi:</label>
-                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                <textarea id="description" name="description" placeholder="Shkruani permbajtjen e programit" rows="4" cols="50"></textarea>
 
                 <label for="image" class="file">Zgjidhni një Imazh:</label>
                 <input type="file" id="image" name="image"><br><br>
@@ -154,7 +154,8 @@ if (isset($_GET['logout'])) {
                 <input type="submit" value="Regjistro Programin">
             </form>
         </div>
-
+        
+      
         <div class="content">
             <div class="right">
                 <?php

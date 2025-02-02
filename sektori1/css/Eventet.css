@@ -3,89 +3,89 @@
     padding: 0;
     }
     /*Pjesa e navbarit*/
-.navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba( 0, 51, 102, 0.2 );
-    backdrop-filter: blur( 20.5px );
-    color: white;
-
-
-  }
-  
-  .brand-title img {
-    margin-top: 10px;
-    margin-left:10px;
-    width: 50px;
-    height: 50px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
-
-  }
-  
-  .navbar-links {
-    height: 90%;
-    position: relative;
-    top: 10px;
-    right: 0%;
-  }
- 
-  .navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links li {
-    list-style: none;
-  }
-  
-  .navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-  }
+    .navbar {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba( 0, 51, 102, 0.2 );
+      backdrop-filter: blur( 20.5px );
+      color: white;
   
   
-  .navbar-links li a:hover {
-    text-decoration: underline;
-  }
-  .navbar-links button{
-    background-color: #fff;
-    color: #000;
-    outline: none;
-    border: solid white; 
-    text-align: center;
-    width: 70px;
-    height: 25px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  .navbar-links button:hover {
-    text-decoration: underline;
-   cursor:  pointer;
-  }
+    }
+    
+    .brand-title img {
+      margin-top: 10px;
+      margin-left:10px;
+      width: 50px;
+      height: 50px;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(87%) hue-rotate(239deg) brightness(113%) contrast(94%);
+  
+    }
+    
+    .navbar-links {
+      height: 90%;
+      position: relative;
+      top: 10px;
+      right: 0%;
+    }
    
-  .toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-  }
+    .navbar-links ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar-links li {
+      list-style: none;
+    }
+    
+    .navbar-links li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+    }
+    
+    
+    .navbar-links li a:hover {
+      text-decoration: underline;
+    }
+    .navbar-links button{
+      background-color: #fff;
+      color: #000;
+      outline: none;
+      border: solid white; 
+      text-align: center;
+      width: 70px;
+      height: 25px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .navbar-links button:hover {
+      text-decoration: underline;
+     cursor:  pointer;
+    }
+     
+    .toggle-button {
+      position: absolute;
+      top: .75rem;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+    }
+    
+    .toggle-button .bar {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+    }
   /*navbari dizajni ===============================================================*/
   
   /*pjesa e headerit =====================================================*/
@@ -263,124 +263,101 @@ font-family: 'Times New Roman', Times, serif;
     margin-top: 20px;
  }
 
-/*u kall truni */
+
 .delete-btn {
-  background-color:  #3498db; /* Ngjyrë e kuqe për butonin */
-  color: black; /* Ngjyrë e bardhë për tekstin */
-  border: none; /* Pa kufij */
-  padding: 10px 20px; /* Kapsullim për butonin */
-  font-size: 16px; /* Madhësia e tekstit */
-  cursor: pointer; /* Cursor që tregon që është i klikueshëm */
-  border-radius: 5px; /* Kënde të rrumbullakosura */
-  transition: background-color 0.3s ease; /* Efekti i kalimit */
+  background-color:  #3498db; 
+  color: black; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
 }
 
 .delete-btn:hover {
-  background-color:yellow; /* Ngjyrë më e errët kur kalohet mbi të */
+  background-color:yellow; 
 }
 
 .delete-btn:focus {
-  outline: none; /* Heqja e kufirit të fokusit */
+  outline: none; 
 }
-.add-news-section{
-  width:100%;
-display: flex;
-flex-direction: row;
-text-align: center;
-justify-content: center;
-border-top: 1px solid white;
+.shtimi {
+  width: 100%;
+  height: 80px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  border-bottom: 1px solid white;
 }
-.add-news-form {
-width:80%;
-display: flex;
-flex-direction: row;
-text-align: center;
-justify-content: center;
-margin-top: 10px;
-margin-bottom: 10px;
 
-}
-.add-news-form input, .add-news-form textarea ::placeholder{
-  color: white;
-opacity: 1;
-}
-.add-news-form input, .add-news-form textarea :-ms-input-placeholder{
-  color: white;
-}
-.add-news-form input, .add-news-form textarea {
-  padding: 5px;
-  margin: 8px 1%; 
+.shtimi input,
+.shtimi textarea {
+  margin-top: 19px;
+  width: 30%;
+  height: 40px;
+  background-color: transparent;
   border: 1px solid white;
-  border-radius: 15px;
   outline: none;
-  color: #fff;
- background-color: transparent; 
-  font-size: 16px;
-  resize: none;
-}
-input[type="file"] {
-display: none;
-
-} 
-input[type="text"] {
-width: 100px;
-border: 1px solid #fff;
-border-radius: 15px;
-color: white;
-outline: none;
-background-color: transparent;
-} 
-
-.add-news-form button {
-  background-color: red; 
+  text-align: center;
   color: white;
-  padding: 12px 20px;
-  border: 1px solid white;
-  border-radius: 15px;
-  cursor: pointer;
-  outline: none;
-  font-size: 16px;
-  margin-top: 12px;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-h2{
- font-size:2.0em;
-  color: white;
-}
-label{
-  margin-top:17px;
-  color: white;
-  font-size:1.3em;
-}
-.data {
-color:white;
-}
-.post h3{
-font-size:20px;
-}
-.post p{
-font-size: 14px;
+.shtimi textarea {
+  margin-right: 20px;
 }
 
-.add-news-section .fotoimg{
-  width: 15%;
-  height: 30px;
+.shtimi input[type="submit"] {
+  width: 30%; 
+  height: 40px;
   background-color: red;
-  cursor: pointer;
-  border-radius: 20px;
-  outline: none;
+  color: white;
   border: 1px solid white;
-  display: inline-block; 
-  text-align: center; 
-  line-height: 20px; 
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.shtimi input:hover {
+  background-color: #000;
+}
+
+.shtimi form {
+  margin-top:15px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.shtimi label {
+  width: 30%; 
+  height:30px;
+  margin-left: 30px;
+  text-align: left; 
+}
+
+.shtimi .file {
+  margin-top: 19px;
+  text-align: center;
   padding-top: 10px;
- margin-bottom: 10px;
- padding-left: 10px;
- margin-right: 10px;
-  }
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
 
-
+.shtimi input[type="file"] {
+  display: none;
+}
 
 
  /*RESP0NSIV*/
@@ -430,7 +407,7 @@ font-size: 14px;
  .navbar-links.active {
      display: flex;
  }
- /*  Pjesa    */
+
  
  .post p{ 
     font-size:15px ;
@@ -446,6 +423,41 @@ font-size: 14px;
 
 }
  @media (max-width: 700px) {
+  .shtimi {
+    flex-direction: column;
+    height: auto;
+    align-items: center;     }
+
+.shtimi input,
+.shtimi textarea {
+    width: 90%; 
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px; 
+}
+
+.shtimi input[type="submit"] {
+    width: 90%; 
+
+}
+
+.shtimi form {
+    width: 90%; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.shtimi label {
+    width: 100%; 
+    margin-left: 0;
+    text-align: center; /
+}
+
+.shtimi .file {
+    width: 90%; 
+    text-align: center;
+}
+
   .span  {
 
    justify-content: space-between;
@@ -478,31 +490,41 @@ font-size: 14px;
     font-size: 13px;
 
   }
-  .post3{
-    display: flex;
-    flex-direction: column;  
-    justify-content: flex-start;  
-    align-items: center;  
-    height: auto; 
-  }
-  .post3 img{
-    position: relative;
-    right: 90px;
-    width: 350px;
-    height: 18vh;
-  }
-  .post3 h3{
-    margin-top: 25px;
-    font-size: 15px;
-    
-  }
-  .post3 p{
-   
-    font-size: 13px;
- }
- .Button{
-  border-radius: 40px;  
-  width: 150px ;
- 
- }
+  
+ .add-news-section {
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+}
+
+.add-news-form input,
+.add-news-form textarea {
+  width: 90%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.add-news-form button {
+  width: 90%;
+  margin-top: 10px;
+}
+
+.add-news-form {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-news-section label {
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}
+
+.add-news-section .fotoimg {
+  width: 90%;
+  text-align: center;
+}
+
 }

@@ -256,135 +256,81 @@ button:disabled {
 .delete-btn:focus {
    outline: none; 
 }
-.add-news-form {
-   width:100%;
+
+.shtimi {
+   width: 100%;
+   height: 100px; 
    display: flex;
-   flex-wrap: wrap;
-  
-  justify-content: space-between;
-}
-.add-news-section{
+   flex-direction: row;
+   justify-content: space-between;
+   color: white;
    border-bottom: 1px solid white;
-   border-top: 1px solid white;
-}
-.add-head-news-section{
-   border-top: 1px solid white;
-   border-bottom: 1px solid white;
-}
-.add-head-news-form{
- width:100%;
- display: flex;
- flex-wrap: wrap;
- align-items: center;
-justify-content: space-between;
 }
 
-.add-news-form input, .add-news-form textarea {
-   outline: none;
+.shtimi input,
+.shtimi textarea {
+   width: 30%;
+   height: 40px;
    background-color: transparent;
-   padding: 5px;
-   margin: 35px; /* Hapsira midis inputeve */
    border: 1px solid white;
-   border-radius: 5px;
-   font-size: 16px;
+   outline: none;
+   text-align: center;
    color: white;
-   resize: none;
-}
-.add-news-form input, .add-news-form textarea::placeholder {
-color: white;
-}
-.add-head-news-form input, .add-head-news-form textarea::placeholder {
-color: white;
-}
-.add-head-news-form input, .add-head-news-form textarea {
-outline: none;
-background-color: transparent;
-padding: 5px;
-margin: 8px 1%; /* Hapsira midis inputeve */
-border: 1px solid white;
-color: white;
-border-radius: 5px;
-font-size: 16px;
-resize: none;
+   border-radius: 5px;
+   margin-right: 10px;
+   margin-left: 10px;
 }
 
-.fotoimg {
-   width: 15%;
-   height: auto;
-   background-color: red;
-   cursor: pointer;
-   border-radius: 20px;
-   outline: none;
-   border: 1px solid white;
-   display: inline-block; 
-   text-align: center; 
-   padding: 10px;
-   word-wrap: break-word; /* Lejon thyerjen e fjalëve nëse janë shumë të gjata */
-   margin-bottom: 40px;
-}
-input[type="file"] {
-display: none;
-} 
-.add-news-form button {
-   background-color: red; 
-   color: white;
-   padding: 8px 10px;
-   border: 1px solid white;
-   
-   outline: none;
-   border-radius: 15px;
-   cursor: pointer;
-   font-size: 16px;
-   height: 50px;
-   margin-top: 40px;
-   transition: background-color 0.3s;
-   margin-right:5%
-}
-.add-news-form button:hover {
-   background-color:#000;
-}
-.add-head-news-form button:hover {
-   background-color:#000;
-}
-.add-head-news-form button {
-   background-color: red; 
-   color: white;
-   padding: 12px 10px;
-   border: 1px solid white;
-   outline: none;
-   border-radius: 15px;
-   cursor: pointer;
-   font-size: 16px;
-   
-   transition: background-color 0.3s;
+.shtimi textarea {
    margin-right: 20px;
 }
 
-
-h2{
-  font-size:2.0em;
+.shtimi input[type="submit"] {
+   width: 30%; 
+   height: 40px;
+   background-color: red;
    color: white;
-}
-label{
-   margin-top:47px;
-   color: white;
-   font-size:1.3em;
-}
-.add-head-news-form  label{
-   margin-top:17px;
-   color: white;
-   font-size:15px;
+   border: 1px solid white;
+   outline: none;
+   text-align: center;
+   border-radius: 5px;
+   cursor: pointer;
 }
 
-.photo1 img{
- position: relative;
-left:8% ;
-width: 90%;
-margin-right:50px;
-height:90vh;
-border-radius: 20px;
+.shtimi input:hover {
+   background-color: #000;
 }
 
+.shtimi form {
+   margin-top: 10px;
+   width: 70%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-right: 10px;
+}
+
+.shtimi label {
+   width: 30%; 
+   height: 40px;
+   margin-left: 30px;
+   text-align: left; 
+}
+
+.shtimi .file {
+   text-align: center;
+   padding-top: 10px;
+   border: 1px solid white;
+   border-radius: 5px;
+   background-color: red;
+   color: white;
+   cursor: pointer;
+}
+
+.shtimi input[type="file"] {
+   display: none;
+   
+}
 
 /*RESP0NSIV*/
 @media (max-width: 1200px) {
@@ -463,6 +409,40 @@ border-radius: 20px;
 }
 @media (max-width: 600px) {
      /*pjes te postit me te ri*/
+     .shtimi {
+      flex-direction: column;
+      height: auto;
+      align-items: center;     }
+
+  .shtimi input,
+  .shtimi textarea {
+      width: 90%; 
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 10px; 
+  }
+
+  .shtimi input[type="submit"] {
+      width: 90%; 
+      margin-top: 10px;
+  }
+
+  .shtimi form {
+      width: 90%; 
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .shtimi label {
+      width: 100%; 
+      margin-left: 0;
+      text-align: center; /
+  }
+
+  .shtimi .file {
+      width: 90%; 
+      text-align: center;
+  }
    .postmain {
          font-size: 5px ;
         gap:15px;

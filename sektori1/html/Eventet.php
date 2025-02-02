@@ -1,115 +1,148 @@
+<?php
+include('../Crud/db.php');
+include('../Crud/Eventet.php');
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'add_event') {
+    $event = new Event($db);
+
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $image = $_FILES['image']['name'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+
+        $event->setDetails($image, $title, $content);
+        if ($event->addEvent()) {
+            echo "<script>alert('Ngjarja është shtuar me sukses!'); window.location.href = '../html/Eventet.php';</script>";
+        } else {
+            echo "<script>alert('Gabim gjatë shtimit të ngjarjes.'); window.history.back();</script>";
+        }
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
+    $event = new Event($db);
+    $id = $_POST['id'];
+    if ($event->deleteEvent($id)) {
+        echo "<script>alert('Eventi u fshi me sukses!'); window.location.href='../html/Eventet.php';</script>";
+    } else {
+        echo "<script>alert('Gabim gjatë fshirjes së eventit.'); window.history.back();</script>";
+    }
+}
+
+
+
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+
+$event = new Event($db);
+$events = $event->getEvents();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../img/ubt.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventet</title>
     <link rel="stylesheet" href="../css/Eventet.css">
 </head>
-<body >
-     <!--Pjesa e navbarit-->
-     <nav class="navbar">
-      <div class="brand-title"><img src="../img/ubt-logo-img1.png" alt=""></div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="home.php">Home</a></li>
-          <li><a href="Lajmet.php">Lajmet</a></li>
-          <li><a href="programet.php">Programet</a></li>
-          <li><a href="Eventet.php">Eventet</a></li>
-          <li><a href="Kompeticionet.php">Kompeticionet</a></li>
-          <li><a href="login.php"><button>Log in</button></a></li>
-      </ul>
-      </div>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><img src="../img/administrator.png" alt=""></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="Lajmet.php">Lajmet</a></li>
+                <li><a href="programet.php">Programet</a></li>
+                <li><a href="Eventet.php">Eventet</a></li>
+                <li><a href="Kompeticionet.php">Kompeticionet</a></li>
+                <li><a href="?logout=true"><button>Log out</button></a></li>
+            </ul>
+        </div>
     </nav>
     <main>
+
+    <hr>
+    <div class="shtimi">
+            <h2>Shto një Event të Ri</h2>
+            <form action="Eventet.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="action" value="add_event">
+               
+               
+                <label for="title">Titulli:</label>
+                <input type="text" id="title" name="title" placeholder="Titulli i Eventit..." required>
+                <label for="content">Përmbajtja:</label>
+                <textarea id="content" name="content" placeholder="Shkruani përmbajtjen e Eventit..." required></textarea>
+               
+                <label for="image" class="file">Zgjidhni një Foto:</label>
+                <input type="file" id="image" name="image" required>
+                <input type="submit" value="Shto Eventin:">
+            </form>
+            </div>
+        
+        
+
+
         <hr>
         <div class="span">
-        <span class="p-titulli">Eventet</span>
-        <input type="search" placeholder="search">
+            <span class="p-titulli">Eventet</span>
+            <input type="search" id="search" placeholder="search">
         </div>
-      <section class="Eventet">
-
-         <div class="post">
-            <div class="photo">
-            <img src="../img/Eventett/img2.jpg" alt="">
-            </div>
-         <div class="tekst">
-            <div class="titulli">
-         <h3>Hapet ekspozita e nxënësve të shkollave të UBT-së <hr class="hr"></h3>
-      </div>
-      <div class="paragrafi">
-         <p>Në hapësirat e shkollave të UBT-së, në kuadër të lëndës së Artit figurativ është hapur Ekspozita e nxënësve. Ekspozita do të jetë e hapur deri të premtën më datën 23 .2. 2024 për të gjithë të interesuarit, të cilët mund të vijnë t’i shikojnë punimet e nxënësve çdo ditë nga ora 8:00-16:00. Kjo ekspozitë pasqyron një nga format e shprehjes kreative të nxënësve, me tamatika dhe stile të ndryshme, të cilat janë punuar me përkushtim e dashuri nga nxënësit.</p>
-      </div>   
-      </div>
-         </div>
-          
-         <div class="post">
-            <div class="photo">
-            <img src="../img/Eventett/download (9).jpg" alt=""></div>
-            <div class="tekst">
-               <div class="titulli1">
-          <h3>Përvjetori i 16-të i Pavarësisë së Kosovës në Shkollat e UBT-së</h3>
-          <hr class="hr"> 
-         </div>
-         <div class="paragrafi">
-          <p>Gjashtëmbëdhjetë vjetori i Pavarësisë së Kosovës në shkollat e UBT-së u shënua me një program kulturor dhe festiv të organizuar nga nxënësit dhe mësimdhënësit e shkollës.
-               Në fjalën e tij përshëndetëse, Rektori i UBT-së, Prof. Dr. Edmond Hajrizi i uroi nxënësit, mësimdhënësit dhe të gjithë të pranishmit për përvjetorin e Pavarësisë së Kosovës, duke e cilësuar si një datë të veçantë historike për të gjithë shqiptarët.</p>
-            </div>
-            </div>
-         </div>
-         <div class="post">
-         <div class="photo">
-            <img src="../img/Eventett/img3.jpeg" alt=""></div>
-            <div class="tekst">
-               <div class="titulli2">
-            <h3 >EON XR në shkollat e UBT-së!</h3>
-            <hr class="hr">
-               </div>
-               <div class="paragrafi">
-            <p>Puna me platformën e avancuar EON XR në shkollat e UBT-së është ajo që po e bën diferencën me shkollat tjera dhe që e karakterizon punën e mësimdhënësve dhe të nxënësve të UBT-së. Përmes kësaj platforme dhe me zbatimin e formave kreative në hartimin e përmbajtjeve mësimore me EON XR, procesi mësimor është më i lehtë, më i dashur dhe më i sukseshëm për nxënësit. Përmes kësaj platforme, mësimdhënësit tashmë po krijojnë përmbatje të reja mësimore interesante, atraktive dhe kreative, duke përdorur mundësitë e shumta që jep EON XR, të cilat po shfrytëzohen shumë mirë si nga mësimdhënësit  ashtu dhe nga nxënësit, në prezantime dhe në projekte të ndryshme mësimore. </p>
-               </div>
-         </div>
-      </div>
-    <div class="moreEvente">
-      <div class="post3" id="post3">
-         <div class="photo">
-         <img src="../img/Eventett/img4.jpg" alt="">
-      </div>
-      <div class="tekst">
-         <div class="titulli3">
-       <h3>UBT ne FIRST Global Challenge!. </h3>
-       <hr class="hr">
-         </div>
-       <p>First Global Challenge është një garë ndërkombëtare e robotikës që mbledh të rinj nga e tërë bota për një qëllim të vetëm: rritja e vetëdijesimit të rinisë në fushat STEM (Shkencë, Teknologji, Inxhinieri dhe Matematikë). Këtë vit kjo garë u mbajt në Singapor nga 7 deri më 10 tetor 2023 me tematikën “Hydrogen Horizons” që promovon krijimin e energjisë së ripërtërishme nga hidrogjeni. Në mesin e 191 shteteve ishte edhe Kosova e përfaqësuar nga ekipi ynë: Eda Palush, Gjin Gojani, Leona Hajrizi dhe Muhamed Shala, me mentore Elita Hajrizi. Pjesë e rëndësishme e ekipit punues ishin edhe nxënës të tjerë, si: Dren Hoxha, Harisa Haziri, Rrezon Halimi, si dhe Arxhend Jetullahu, inxhinier i mekatronikës.</p>
-       </div>
-       </div>
-     </div>
-     <button class="Button" id="moreEventsButton">shiko me shum</button>
-      </section>
-     
-      
+        <section class="Eventet">
+            <?php
+            if ($events->num_rows > 0) {
+                while ($row = mysqli_fetch_assoc($events)) {
+                    echo '<div class="post">';
+                    echo '<div class="photo">';
+                    $imagePath = '../uploads/' . htmlspecialchars($row['image']);
+                    echo '<img src="' . $imagePath . '" alt="' . htmlspecialchars($row['title']) . '">';
+                    echo '</div>';
+                    echo '<div class="tekst">';
+                    echo '<div class="titulli"><h3>' . htmlspecialchars($row['title']) . '<hr class="hr"></h3></div>';
+                    echo '<div class="paragrafi"><p>' . htmlspecialchars($row['content']) . '</p></div>';
+                    echo '<div class="data"><p><strong>Data e eventit:</strong> ' . htmlspecialchars($row['date']) . '</p></div>';
+                    echo '</div>';
+                    echo '<form action="Eventet.php" method="POST" onsubmit="return confirm(\'A jeni i sigurt që dëshironi të fshini këtë event?\');">';
+                    echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                    echo '<button type="submit" class="delete-btn">Fshi</button>';
+                    echo '</form>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>Nuk ka evente për momentin.</p>";
+            }
+            mysqli_close($db);
+            ?>
+        </section>
     </main>
-    <script>
-      const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-    
-    toggleButton.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active')
-    })
-    
-    
-    </script>
-    
-    <footer >
-    <hr>
-    <h4>copyrights &#169 all rights reserved from UBT</h4>
+    <footer>
+        <hr>
+        <h4>copyrights &#169 all rights reserved from UBT</h4>
     </footer>
-  
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
+    </script>
     <script src="../js/Eventet.js"></script>
 </body>
 </html>
+
