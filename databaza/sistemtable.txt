@@ -1,0 +1,88 @@
+tabelat e sistemit 
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('Student', 'Arsimtar', 'Prind') NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);  
+CREATE TABLE arsimtar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE studenti (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE prind (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+====================tabela e lendeve ============================================
+CREATE TABLE subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    professor_id INT NOT NULL,
+    FOREIGN KEY (professor_id) REFERENCES users(id) ON DELETE CASCADE 
+);
+
+CREATE TABLE subject_materials (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    subject_id INT NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
+    file_path VARCHAR(255) NOT NULL,
+    FOREIGN KEY (subject_id) REFERENCES subjects(id)
+);
+
+ALTER TABLE subject_materials ADD COLUMN file_title VARCHAR(255) NOT NULL;
+
+============tabela qe i run landet kur tja jep passwordin me hy ma leht =====
+
+CREATE TABLE student_subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    subject_id INT NOT NULL,
+    has_logged_in BOOLEAN DEFAULT 0,  -- 0 = nuk ka hyrë, 1 = ka hyrë
+    FOREIGN KEY (student_id) REFERENCES studenti(id) ON DELETE CASCADE,
+    FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE
+);
+ALTER TABLE student_subjects ADD UNIQUE (student_id, subject_id);
+
+========= per lidhjen student subject=========
+ALTER TABLE student_subjects 
+ADD COLUMN registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+==============notat e studentit ===============================
+CREATE TABLE student_notat (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    subject_id INT NOT NULL,
+    grade DECIMAL(5,2),  -- Përdorimi i një fushë numerike për notën
+    FOREIGN KEY (student_id) REFERENCES studenti(id) ON DELETE CASCADE,
+    FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE
+);
+ALTER TABLE student_notat ADD COLUMN professor_id INT NOT NULL;
+ALTER TABLE student_notat ADD FOREIGN KEY (professor_id) REFERENCES users(id) ON DELETE CASCADE;
+
+
+----Tabela e mesazheve -----
+CREATE TABLE mesazhet (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_id INT NOT NULL,
+    receiver_id INT NOT NULL,
+    message TEXT NOT NULL,
+    message_image VARCHAR(255) DEFAULT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE
+);

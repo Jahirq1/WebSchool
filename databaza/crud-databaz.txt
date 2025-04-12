@@ -1,0 +1,66 @@
+create DataBase news_db ;
+use news_db;
+===============Lajmet.php=================tabel per shtimin e lajmev ne sliderin e page te lajmeve======
+CREATE TABLE post (
+    id INT AUTO_INCREMENT PRIMARY KEY,     -- Identifikues unik
+    image_url VARCHAR(255) NOT NULL,       -- URL-ja e imazhit
+    title VARCHAR(255) NOT NULL,           -- Titulli i lajmit
+    content TEXT NOT NULL,                 -- Përmbajtja e lajmit
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Koha kur është krijuar postimi
+);
+===============Eventet.php=================
+CREATE TABLE `eventet` (
+  `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `content` TEXT NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
+  `date` DATE NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+===============Home.php=================
+CREATE TABLE homeSlider (
+    id INT AUTO_INCREMENT PRIMARY KEY,     -- Identifikues unik
+    image_url VARCHAR(255) NOT NULL,       -- URL-ja e imazhit
+    title VARCHAR(255) NOT NULL,           -- Titulli i lajmit
+    content TEXT NOT NULL,                 -- Përmbajtja e lajmit
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Koha kur është krijuar postimi
+);
+===============competitions.php=================
+CREATE TABLE kompeticionet (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255) -- Kolona për ruajtjen e imazhit
+);
+-------------Programet.php----------
+CREATE TABLE Programet (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255) -- Kolona për ruajtjen e imazhit
+);
+--------------Admin-table-------------
+CREATE TABLE admin (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50),z
+  password VARCHAR(255)
+);
+insert into admin(username,password)VALUES('Admin','admin1234')
+
+
+================lajmet kryesore=======
+CREATE TABLE head_news (
+    id INT AUTO_INCREMENT PRIMARY KEY,           -- Identifikues unik
+    head_image_url VARCHAR(255) NOT NULL,         -- URL-ja e imazhit kryesor
+    head_title VARCHAR(255) NOT NULL,             -- Titulli i lajmit kryesor
+    head_content TEXT NOT NULL,                   -- Përmbajtja e lajmit kryesor
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Koha kur është krijuar lajmi
+);
+--------------kontakt-forma-----------------
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    emri VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    mesazhi TEXT NOT NULL,
+    data_regjistrimi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
