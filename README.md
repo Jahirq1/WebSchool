@@ -15,3 +15,16 @@ Ky projekt është zhvilluar në bashkëpunim me mbështetje nga profesori Erzen
  Ky projekt eshte zhvilluar ekskluzivisht  per perdorim akademik dhe nuk mund te perdoret per qellime komerciale pa miratimin e autoreve dhe fakultetit te UBT-se .
 
  Ky projekt eshte i mbrojtur nga ligji i te drejtave te autorit dhe nuk mund te kopjohet , shperndahet , apo perdoret pa lejen e autoreve . te gjitha te drejtat jane te rezervuara per autoret e projektit dhe Fakultetin e UBT-se
+ # Fotot e web aplikacionit
+ ![Image Alt](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f1.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f2.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f3.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f4.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f5.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/n1.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/n2.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/n3.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/n4.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/s1.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/s2.png
+ ![Image Alt]https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/s3.png
