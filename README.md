@@ -14,4 +14,4 @@ Ky projekt është zhvilluar në bashkëpunim me mbështetje nga profesori Erzen
 
  Ky projekt eshte zhvilluar ekskluzivisht  per perdorim akademik dhe nuk mund te perdoret per qellime komerciale pa miratimin e autoreve dhe fakultetit te UBT-se .
 
- Ky projekt eshte i mbrojtur nga ligji i te drejtave te autorit dhe nuk mund te kopjohet , shperndahet , ap perdoret pa lejen e autoreve . te gjitha te drejtat jane te rezervuara per autoret e projektit dhe Fakultetin e UBT-se
+ Ky projekt eshte i mbrojtur nga ligji i te drejtave te autorit dhe nuk mund te kopjohet , shperndahet , apo perdoret pa lejen e autoreve . te gjitha te drejtat jane te rezervuara per autoret e projektit dhe Fakultetin e UBT-se
