@@ -19,8 +19,8 @@ Ky projekt eshte i mbrojtur nga ligji i te drejtave te autorit dhe nuk mund te k
 # Fotot e web aplikacionit
 
 ![f1](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f1.png?raw=true)
-![f1](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/t1.jpg?raw=true)
-![f1](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/t2.jpg?raw=true)
+![t1](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/t1.jpg?raw=true)
+![t2](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/t2.jpg?raw=true)
 ![f2](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f2.png?raw=true)
 ![f3](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f3.png?raw=true)
 ![f4](https://github.com/Jahirq1/WebSchool/blob/908568f09d60a1d112dfce1da830012dd3352cb8/Web-App-photo/f4.png?raw=true)
